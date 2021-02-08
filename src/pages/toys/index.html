@@ -1,27 +1,158 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico" />
-    <title>Игрушки</title>
+    <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
   </head>
   <body>
     @@include('header/index.html')
-    <main class="toys-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Игрушки</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице игрушек
-        </h2>
-      </div>
-    </main>
+    <main>
+        <h1 class="page-title container"> Toy for kids</h1>
+        <div class="breadcrumbs-block container">
+            <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
+            <a href="/pages/catalog"><p class="breadcrumbs-page-inactive">Catalog</p></a>
+            <p class="breadcrumbs-active-page">Toys</p>
+        </div>
+        <section class="goods-filter-form">
+            <h2 class="visually-hidden">Company goods filter</h2>
+            <form action="https://echo.htmlacademy.ru" method="post" class="details-goods container">
+                <fieldset class="form-cost-wrapper details-form-border">
+                    <legend class="color-title details-block-title">Cost</legend>
+                        <div class="range cost-range">
+                            <div class="field">
+                                <label for="cost-range" class="visually-hidden">Cost</label>
+                                <input id="cost-range" class="cost-range-input" type="range" min="0" max="500" value="100" step="50">
+                                <div class="cost-input-focus"></div>
+                                <div class="value left">0</div>
+                                <div class="value right">500</div>
+                            </div>
+                        </div>
+                </fieldset>
+                <fieldset class="form-color-wrapper details-form-border">
+                    <legend class="color-title details-block-title">Color</legend>
+                    <ul class="form-color-list">
+                        <li class="color-list">
+                            <input id="check-black" type="checkbox" class="visually-hidden color-checkbox-input" checked>
+                            <label for="check-black" class="color-checkbox-label">Black</label>
+                        </li>
+                        <li class="color-list">
+                            <input id="check-blue" type="checkbox" class="visually-hidden color-checkbox-input">
+                            <label for="check-blue" class="color-checkbox-label">Blue</label>
+                        </li>
+                        <li class="color-list">
+                            <input id="check-green" type="checkbox" class="visually-hidden color-checkbox-input">
+                            <label for="check-green" class="color-checkbox-label">Green</label>
+                        </li>
+                        <li class="color-list">
+                            <input id="check-white" type="checkbox" class="visually-hidden color-checkbox-input">
+                            <label for="check-white" class="color-checkbox-label">White</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form-delivery-wrapper details-form-border">
+                    <legend class="delivery-title details-block-title">Delivery</legend>
+                    <ul class="form-delivery-list">
+                        <li class="radio-list">
+                            <input id="radio-free" type="radio" name="delivery" value="no" class="visually-hidden delivery-radio-input">
+                            <label for="radio-free" class="delivery-radio-label">Free shipping</label>
+                        </li>
+                        <li class="radio-list">
+                            <input id="radio-fast" type="radio" name="delivery" value="yes" class="visually-hidden delivery-radio-input" checked>
+                            <label for="radio-fast" class="delivery-radio-label">Fast shipping</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form-amount-wrapper details-form-border">
+                    <legend class="amount-title details-block-title">Amount</legend>
+                    <ul class="form-amount-list">
+                        <li class="amount-list">
+                            <input id="radio-0-5" type="radio" name="amount" value="yes" class="visually-hidden amount-radio-input" checked>
+                            <label for="radio-0-5" class="amount-radio-label">0-5</label>
+                            <div class="amount-input-focus"></div>
+                        </li>
+                        <li class="amount-list">
+                            <input id="radio-10-20" type="radio" name="amount" value="no" class="visually-hidden amount-radio-input">
+                            <label for="radio-10-20" class="amount-radio-label">10-20</label>
+                            <div class="amount-input-focus"></div>
+                        </li>
+                        <li class="amount-list">
+                            <input id="radio-20-50" type="radio" name="amount" value="no" class="visually-hidden amount-radio-input">
+                            <label for="radio-20-50" class="amount-radio-label">20-50</label>
+                            <div class="amount-input-focus"></div>
+                        </li>
+                    </ul>
+                </fieldset>
+                @@include('button/index.html', {
+                    "button-text": "Apply",
+                    "tag": "button",
+                    "type": "submit",
+                    "class": "details-goods-submit"
+                  })
+                <!-- <button type="submit" class="details-goods-submit button">Apply</button> -->
+            </form>
+        </section>
+        <section class="company-goods container">
+            <h2 class="visually-hidden">Company goods</h2>
+            <ul class="goods-list">
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/chair-cover.png" alt="chair cover" width="380" height="385">
+                    <p class="goods-description">Snarky bean bag chair cover</p>
+                    <p class="goods-cost">$60.00 USD</p>
+                </li>
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/brass-frames.png" alt="brass frames" width="380" height="385">
+                    <p class="goods-description">Brass deco frames</p>
+                    <p class="goods-cost">$66.00 USD</p>
+                </li>
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/apron.png" alt="apron" width="380" height="385">
+                    <p class="goods-description">Cibo full apron</p>
+                    <p class="goods-cost">$60.00 USD</p>
+                </li>
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/gumball-machine.png" alt="gumball machine" width="380" height="385">
+                    <p class="goods-description">Gatcha gatcha gumball machine</p>
+                    <p class="goods-cost">$56.00 USD</p>
+                </li>
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/scented-candle.png" alt="scented candle" width="380" height="385">
+                    <p class="goods-description">Christmas advent scented candle</p>
+                    <p class="goods-cost">$29.00 USD</p>
+                </li>
+                <li class="goods-card">
+                    <a class="goods-link" href="#">
+                        <div class="user-attention">Learn more</div>
+                    </a>
+                    <img class="goods-img" src="/static/images/tangle-spinning-tea-light.png" alt="tangle spinning tea light" width="380" height="382">
+                    <p class="goods-description">Tangle sprinning tea light</p>
+                    <p class="goods-cost">$56.00 USD</p>
+                </li>
+            </ul>
+        </section>
+    @@include('pagination/index.html')
+        </main>
     @@include('footer/index.html')
     <script src="index.js"></script>
   </body>

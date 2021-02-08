@@ -1,27 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Каталог</title>
   </head>
   <body>
     @@include('header/index.html')
-    <main class="catalog-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Каталог</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице каталога
-        </h2>
+    <main>
+      <h1 class="page-title container">Category Products</h1>
+      <div class="breadcrumbs-block container">
+          <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
+          <p class="breadcrumbs-active-page">Catalog</p>
       </div>
-    </main>
+      <section class="category-preview catalog-container">
+          <h2 class="category-preview-title visually-hidden">Categoryes preview</h2>
+          <ul class="category-cards">
+              <li class="category-card">
+                  <p class="category-card-title" >Apparel kids</p>
+                  <a class="category-card-link" href="#"></a>
+              </li>
+              <li class="category-card">
+                  <p class="category-card-title" >Holiday shop</p>
+                  <a class="category-card-link" href="#"></a>
+              </li>
+              <li class="category-card">
+                  <p class="category-card-title" >Toys</p>
+                  <a class="category-card-link" href="/pages/toys"></a>
+              </li>
+              <li class="category-card">
+                  <p class="category-card-title" >Accessories</p>
+                  <a class="category-card-link" href="#"></a>
+              </li>
+              <li class="category-card">
+                  <p class="category-card-title" >Sale</p>
+                  <a class="category-card-link" href="#"></a>
+              </li>
+              <li class="category-card">
+                  <p class="category-card-title" >Apparel adults</p>
+                  <a class="category-card-link" href="#"></a>
+              </li>
+          </ul>
+      </section>
+      <section class="product-description catalog-container">
+          <h2 class="product-description-title">Product Description</h2>
+          <p class="product-description-text">
+              Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
+          </p>
+          <p class="product-description-text">
+              A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+          </p>
+          <p class="product-description-text">
+              The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+          </p>
+      </section>
+      </main>
     @@include('footer/index.html')
     <script src="index.js"></script>
   </body>

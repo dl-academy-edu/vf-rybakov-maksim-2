@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+    <section class="container">
+        <h1 class="page-title">Contact Us</h1>
+        <div class="breadcrumbs-block">
+            <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
+            <p class="breadcrumbs-active-page">Contact us</p>
+        </div>
+    </section>
+    <section class="contact-main container">
+        <h2 class="visually-hidden">Contact form</h2>
+        <div class="contact-wrapper">
+            <form class="contact-form" name="user-message" action="https://echo.htmlacademy.ru" method="POST">
+                <fieldset class="contact-form-inputs">
+                    <div class="contact-form-wrapper">
+                        <div class="label-wrapper">
+                            <label class="contact-form-name contact-input-title" for="popup-user-name">Name</label>
+                            <input class="contact-user-name" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
+                        </div>
+                        <div class="label-wrapper">
+                            <label class="contact-form-phone contact-input-title" for="popup-user-phone">Phone</label>
+                            <input class="contact-user-phone" id="popup-user-phone" type="text">
+                        </div>
+                        
+                        <div class="label-wrapper">
+                            <label class="contact-form-email contact-input-title" for="popup-user-email">Email</label>
+                            <input class="contact-user-email" id="popup-user-email" type="email">
+                        </div>
+                        
+                        <div class="label-wrapper">
+                            <label class="contact-form-message contact-input-title" for="contact-user-message">Message</label>
+                            <textarea class="contact-user-message" name="user-message" id="contact-user-message" cols="80" rows="8"></textarea>
+                        </div>
+                        
+                        <div class="label-wrapper">
+                            <input class="contact-user-processing visually-hidden" id="user-consent" type="checkbox" checked>
+                            <label class="contact-form-processing" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
+                        </div>
+                        @@include('button/index.html', {
+                            "button-text": "Submit",
+                            "tag": "button",
+                            "type": "submit",
+                            "class": "contact-subscribe"
+                          })
+                        <!-- <button class="contact-subscribe button" type="submit">Submit</button> -->
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="form-description">
+            <p class="form-description-text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+            <p class="form-description-text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+            <p class="form-description-slogan">An expert is waiting to help you!</p>
+        </div>
+    </section>
+</main>
+@@include('footer/index.html')
+<script src="index.js"></script>
+</body>
+</html>
