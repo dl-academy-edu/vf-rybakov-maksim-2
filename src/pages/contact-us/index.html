@@ -16,55 +16,55 @@
     <main>
     <section class="container">
         <h1 class="page-title">Contact Us</h1>
-        <div class="breadcrumbs-block">
-            <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
-            <p class="breadcrumbs-active-page">Contact us</p>
+        <div class="breadcrumbs">
+            <a href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+            <p class="breadcrumbs__active-page">Contact us</p>
         </div>
     </section>
     <section class="contact-main container">
         <h2 class="visually-hidden">Contact form</h2>
-        <div class="contact-wrapper">
+        <div class="contact__wrapper">
             <form class="contact-form" name="user-message" action="https://echo.htmlacademy.ru" method="POST">
-                <fieldset class="contact-form-inputs">
-                    <div class="contact-form-wrapper">
-                        <div class="label-wrapper">
-                            <label class="contact-form-name contact-input-title" for="popup-user-name">Name</label>
-                            <input class="contact-user-name" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
+                <fieldset class="contact-form__inputs">
+                    <div class="contact-form__wrapper">
+                        <div class="contact-form__label-wrapper">
+                            <label class="contact-form__input-title" for="popup-user-name">Name</label>
+                            <input class="contact-form__input-name" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
                         </div>
-                        <div class="label-wrapper">
-                            <label class="contact-form-phone contact-input-title" for="popup-user-phone">Phone</label>
-                            <input class="contact-user-phone" id="popup-user-phone" type="text">
-                        </div>
-                        
-                        <div class="label-wrapper">
-                            <label class="contact-form-email contact-input-title" for="popup-user-email">Email</label>
-                            <input class="contact-user-email" id="popup-user-email" type="email">
+                        <div class="contact-form__label-wrapper">
+                            <label class="contact-form__input-title" for="popup-user-phone">Phone</label>
+                            <input class="contact-form__input-phone" id="popup-user-phone" type="text">
                         </div>
                         
-                        <div class="label-wrapper">
-                            <label class="contact-form-message contact-input-title" for="contact-user-message">Message</label>
-                            <textarea class="contact-user-message" name="user-message" id="contact-user-message" cols="80" rows="8"></textarea>
+                        <div class="contact-form__label-wrapper">
+                            <label class="contact-form__input-title" for="popup-user-email">Email</label>
+                            <input class="contact-form__input-email" id="popup-user-email" type="email">
                         </div>
                         
-                        <div class="label-wrapper">
-                            <input class="contact-user-processing visually-hidden" id="user-consent" type="checkbox" checked>
-                            <label class="contact-form-processing" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
+                        <div class="contact-form__label-wrapper">
+                            <label class="contact-form__input-title" for="contact-user-message">Message</label>
+                            <textarea class="contact-form__input-message" name="user-message" id="contact-user-message" cols="80" rows="8"></textarea>
+                        </div>
+                        
+                        <div class="contact-form__label-wrapper">
+                            <input class="contact-form__input-processing visually-hidden" id="user-consent" type="checkbox" checked>
+                            <label class="contact-form__label-processing" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
                         </div>
                         @@include('button/index.html', {
                             "button-text": "Submit",
                             "tag": "button",
                             "type": "submit",
-                            "class": "contact-subscribe"
+                            "class": "contact-form__button-subscribe"
                           })
                         <!-- <button class="contact-subscribe button" type="submit">Submit</button> -->
                     </div>
                 </fieldset>
             </form>
         </div>
-        <div class="form-description">
-            <p class="form-description-text">Our support team are on-hand to assist with any issues you are experiencing.</p>
-            <p class="form-description-text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
-            <p class="form-description-slogan">An expert is waiting to help you!</p>
+        <div class="contact__description">
+            <p class="contact__description_text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+            <p class="contact__description_text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+            <p class="contact__description_slogan">An expert is waiting to help you!</p>
         </div>
     </section>
 </main>

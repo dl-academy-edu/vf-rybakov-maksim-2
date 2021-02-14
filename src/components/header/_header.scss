@@ -11,87 +11,78 @@
           align-items: center;
   padding-top: 50px;
   margin-bottom: 40px;
-}
-
-.index-link {
-  margin-right: 60px;
-}
-.index-link:hover {
-  opacity: 50%;
-}
-.index-link:active {
-  opacity: 20%;
-}
-
-.header-nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 8px;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.header-nav {
-  margin-right: auto;
-}
-
-.header-nav-link {
-  margin-right: 20px;
-  max-width: 250px;
-}
-
-.nav-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  color: black;
-}
-.nav-link:hover {
-  opacity: 50%;
-}
-.nav-link:active {
-  opacity: 20%;
-}
-
-
-.button-search {
-  padding: 0;
-  padding-top: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.header-search {
-  margin-right: 24px;
-}
-.header-search:hover {
-  opacity: 50%;
-}
-.header-search:active {
-  opacity: 20%;
-}
-
-.button-contact {
-  margin-top: -7px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-}
-.button-contact:hover {
-  opacity: 50%;
-}
-.button-contact:active {
-  opacity: 20%;
+  &__logo-link {
+    margin-right: 60px;
+    &:hover {
+      opacity: 50%;
+    }
+    &:active {
+      opacity: 20%;
+    }
+  }
+  &__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 8px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  &__nav {
+    margin-right: auto;
+  }
+  &__nav-link {
+    margin-right: 20px;
+    max-width: 250px;
+  }
+  &__nav-link_a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      opacity: 50%;
+    }
+    &:active {
+      opacity: 20%;
+    }
+  }
+  &__search_button {
+    padding: 0;
+    padding-top: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  &__search_img {
+    margin-right: 24px;
+    &:hover {
+      opacity: 50%;
+    }
+    &:active {
+      opacity: 20%;
+    }
+  }
+  &__contact_button {
+    margin-top: -7px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    &:hover {
+      opacity: 50%;
+    }
+    &:active {
+      opacity: 20%;
+    }
+  }
 }

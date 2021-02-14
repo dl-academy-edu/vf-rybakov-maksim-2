@@ -1,6 +1,6 @@
-var popupContact = document.querySelector('.index-popup-overlay')
-var popupButton = document.querySelector('.popup-button-link')
-var popupCloseButton = popupContact.querySelector('.button-close')
+var popupContact = document.querySelector('.index-popup__overlay')
+var popupButton = document.querySelector('.slider-description__button_popup-link')
+var popupCloseButton = popupContact.querySelector('.index-popup__button-close')
 var firstInput = popupContact.querySelector('#popup-user-name')
 
 popupButton.addEventListener('click', function () {

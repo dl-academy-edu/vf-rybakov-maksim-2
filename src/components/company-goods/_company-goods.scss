@@ -1,0 +1,58 @@
+.company-goods {
+    &__card {
+        position: relative;
+        width: 380px;
+        margin-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        &:hover .company-goods__user-attention {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 207px;
+            height: 207px;
+            margin-left: -104px;
+            margin-top: 89px;
+            padding-top: 82px;
+            background-color: #E5EAF8;
+            font-family: 'Montserrat', 'Arial', 'sans-serif';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 29px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #1E0606;
+            opacity: 0.9;
+            cursor: pointer;
+        }
+        &:active .company-goods__user-attention {
+            opacity: 0.67;
+        }
+    }
+    &__user-attention {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    &__description {
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__cost {
+        font-weight: bold;
+        text-align: center;
+    }
+}

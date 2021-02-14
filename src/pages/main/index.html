@@ -10,126 +10,137 @@
     <link href="style.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-  </head>
-  <body>
+</head>
+<body>
     @@include('header/index.html')
     <main>
-      <h1 class="home-page-title visually-hidden">DLC shop</h1>
-  <section class="slider container">
-      <div class="slider-information">
-          <img class="slider-image" src="/static/images/toy-in-trolley.png" alt="toy in trolley" width="635" height="461">
+    <h1 class="home-page-title visually-hidden">DLC shop</h1>
+<section class="slider container">
+      <div class="slider__information">
+          <img class="slider__img" src="/static/images/toy-in-trolley.png" alt="toy in trolley" width="635" height="461">
           <div class="slider-pagination">
-              <p class="slider-page-number">01</p>
-              <ul class="slider-page-buttons">
-                  <li class="slider-page"><button class="button slider-active-page" type="button"></button></li>
-                  <li class="slider-page"><button class="button slider-hidden-page" type="button"></button></li>
-                  <li class="slider-page"><button class="button slider-hidden-page" type="button"></button></li>
-                  <li class="slider-page"><button class="button slider-hidden-page" type="button"></button></li>
+              <p class="slider-pagination__page-number">01</p>
+              <ul class="slider-pagination__ul">
+                  <li class="slider-pagination__button"><button class="slider-pagination__button_active" type="button"></button></li>
+                  <li class="slider-pagination__button"><button class="slider-pagination__button_hidden" type="button"></button></li>
+                  <li class="slider-pagination__button"><button class="slider-pagination__button_hidden" type="button"></button></li>
+                  <li class="slider-pagination__button"><button class="slider-pagination__button_hidden" type="button"></button></li>
               </ul>
           </div>
           <div class="slider-description">
-              <h2 class="slider-title">The ooh noo collection</h2>
-              <p class="slider-description-article">Designed in Slovenia</p>
+              <h2 class="slider-description__title">The ooh noo collection</h2>
+              <p class="slider-description__article">Designed in Slovenia</p>
               @@include('button/index.html', {
                 "button-text": "Explore now",
                 "tag": "button",
                 "type": "submit",
-                "class": "popup-button-link"
+                "class": "slider-description__button_popup-link"
               })
           </div>
       </div>
       
-      <p class="slider-benefits">Free (continental) USA shipping on all orders of $100 USD or more!</p>
-  </section>
-  <section class="category-products container">
-      <h2 class="block-title category-title">Category products</h2>
-      <ul class="category-list">
-          <li class="category-card">
-              <p class="category-card-title" >Apparel kids</p>
-              <a class="category-card-link" href="#"></a>
-          </li>
-          <li class="category-card">
-              <p class="category-card-title" >Holiday shop</p>
-              <a class="category-card-link" href="#"></a>
-          </li>
-          <li class="category-card">
-              <p class="category-card-title" >Toys</p>
-              <a class="category-card-link" href="/pages/toys"></a>
-          </li>
-          <li class="category-card">
-              <p class="category-card-title" >Accessories</p>
-              <a class="category-card-link" href="#"></a>
-          </li>
+      <p class="slider-description__benefits">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+</section>
+<section class="category-products container">
+      <h2 class="category-products__title ">Category products</h2>
+      <ul class="category-products__ul">
+          @@include('category-products/index.html', {
+              "class": "category-products__card",
+              "class-title": "category-products__card-title",
+              "text": "Apparel kids",
+              "class-link": "category-products__card-link",
+              "href": "#",
+          })
+          @@include('category-products/index.html', {
+            "class": "category-products__card",
+            "class-title": "category-products__card-title",
+              "text": "Holiday shop",
+              "class-link": "category-products__card-link",
+              "href": "#",
+          })
+          @@include('category-products/index.html', {
+            "class": "category-products__card",
+            "class-title": "category-products__card-title",
+              "text": "Toys",
+              "class-link": "category-products__card-link",
+              "href": "/pages/toys",
+          })
+          @@include('category-products/index.html', {
+            "class": "category-products__card",
+            "class-title": "category-products__card-title",
+            "text": "Accessories",
+            "class-link": "category-products__card-link",
+            "href": "#",
+          })
       </ul>
       <div class="category-pagination">
-          <button class="category-pagination-control" type="button"><img class="category-pagination-img" src="/static/images/left-vector.png" alt="left vector" width="18" height="31"></button>
-          <button class="category-pagination-control" type="button"><img class="category-pagination-img" src="/static/images/right-vector.png" alt="right vector" width="18" height="31"></button>
-          <p class="category-pagination-description">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+          <button class="category-pagination__button-control" type="button"><img class="category-pagination__img" src="/static/images/left-vector.png" alt="left vector" width="18" height="31"></button>
+          <button class="category-pagination__button-control" type="button"><img class="category-pagination__img" src="/static/images/right-vector.png" alt="right vector" width="18" height="31"></button>
+          <p class="category-pagination__description">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
       </div>
-  </section>
-  <section class="services container">
-      <img class="service-picture" src="/static/images/girl-in-dress.jpg" alt="a girl in a dress" width="480" height="559">
-      <div class="right-service-block">
-          <h2 class="block-title service-title">Delivery</h2>
-          <ul class="service-list">
-              <li class="active-service-list">
-                  <a class="index-service-link" href="#">Delivery</a>
+</section>
+<section class="service container">
+      <img class="service__img" src="/static/images/girl-in-dress.jpg" alt="a girl in a dress" width="480" height="559">
+      <div class="service-information">
+          <h2 class="service-information__title">Delivery</h2>
+          <ul class="service-information__ul">
+              <li class="service-information__li_active">
+                  <a class="service-information__link" href="#">Delivery</a>
               </li>
-              <li class="hidden-service-list">
-                  <a class="index-service-link" href="#">Guarantee</a>
+              <li class="service-information__li_hidden">
+                  <a class="service-information__link" href="#">Guarantee</a>
               </li>
-              <li class="hidden-service-list">
-                  <a class="index-service-link" href="#">Credit</a>
+              <li class="service-information__li_hidden">
+                  <a class="service-information__link" href="#">Credit</a>
               </li>
           </ul>
-          <p class="block-description services-description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-          <p class="block-description services-description">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+          <p class="service-information__description">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+          <p class="service-information__description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
           @@include('button/index.html', {
             "button-text": "Learn more",
             "tag": "a",
             "href": "#",
-            "class": "service-button"
+            "class": "service-information__button"
           })
           <!-- <a class="button service-button" href="#">Learn more</a> -->
       </div>
-  </section>
-  <section class="partners container">
-      <h2 class="partners-title visually-hidden">Partners</h2>
-      <ul class="partners-list">
-          <li><a class="pertner-name" href="#"><img src="/static/images/mail.png" alt="mail.ru" width="193" height="60"></a></li>
-          <li><a class="pertner-name" href="#"><img src="/static/images/apple.png" alt="apple" width="179" height="61"></a></li>
-          <li><a class="pertner-name" href="#"><img src="/static/images/eltex.png" alt="eltex" width="216" height="46"></a></li>
-          <li><a class="pertner-name" href="#"><img src="/static/images/owox.png" alt="owox" width="211" height="40"></a></li>
+</section>
+<section class="partners container">
+      <h2 class="partners__title visually-hidden">Partners</h2>
+      <ul class="partners__list">
+          <li><a class="partners__name" href="#"><img src="/static/images/mail.png" alt="mail.ru" width="193" height="60"></a></li>
+          <li><a class="partners__name" href="#"><img src="/static/images/apple.png" alt="apple" width="179" height="61"></a></li>
+          <li><a class="partners__name" href="#"><img src="/static/images/eltex.png" alt="eltex" width="216" height="46"></a></li>
+          <li><a class="partners__name" href="#"><img src="/static/images/owox.png" alt="owox" width="211" height="40"></a></li>
       </ul>
-  </section>
-  <section class="about-us container">
-      <div class="left-wrapper">
-          <div class="about-us-left">
-              <h2 class="about-us-title">Design life kids</h2>
-              <h3 class="about-us-subtitle">About us</h3>
-              <p class="block-description about-us-description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-              @@include('button/index.html', {
+</section>
+<section class="about-us container">
+    <div class="about-us__left-wrapper">
+        <div class="about-us_left">
+            <h2 class="about-us__title">Design life kids</h2>
+            <h3 class="about-us__subtitle">About us</h3>
+            <p class="about-us__description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+            @@include('button/index.html', {
                 "button-text": "buy now",
                 "tag": "a",
                 "href": "#",
-                "class": "about-us-button"
-              })
-              <!-- <a href="#" class="button about-us-button">buy now</a> -->
-          </div>
-      </div>
-      <div class="right-wrapper">
-          <div class="abuot-us-right">
-              <h2 class="about-us-title">Contacts</h2>
-              <p class="block-description about-us-description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-              <p class="about-us-map" >
-                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2bb56dd7788f4ed502d92054fe37f0ba7dc86c312fcd9861c6ac7d599bbc8c67&amp;source=constructor" width="483" height="196" style="border:0;"></iframe>
-              </p>
-          </div>
-      </div>
-  </section>
-  </main>
+                "class": "about-us__button"
+            })
+        </div>
+    </div>
+    <div class="about-us__right-wrapper">
+        <div class="about-us_right">
+            <h2 class="about-us__title">Contacts</h2>
+            <p class="about-us__description">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+            <p class="about-us__map" >
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2bb56dd7788f4ed502d92054fe37f0ba7dc86c312fcd9861c6ac7d599bbc8c67&amp;source=constructor" width="483" height="196" style="border:0;"></iframe>
+            </p>
+        </div>
+    </div>
+</section>
+</main>
     @@include('footer/index.html')
     @@include('popup/index.html')
     <script src="scripts.js"></script>
-  </body>
+</body>
 </html>

@@ -15,77 +15,74 @@
     @@include('header/index.html')
     <main>
         <h1 class="page-title container"> Toy for kids</h1>
-        <div class="breadcrumbs-block container">
-            <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
-            <a href="/pages/catalog"><p class="breadcrumbs-page-inactive">Catalog</p></a>
-            <p class="breadcrumbs-active-page">Toys</p>
+        <div class="breadcrumbs container">
+            <a href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+            <a href="/pages/catalog"><p class="breadcrumbs__page-inactive">Catalog</p></a>
+            <p class="breadcrumbs__active-page">Toys</p>
         </div>
-        <section class="goods-filter-form">
+        <section class="goods-filter">
             <h2 class="visually-hidden">Company goods filter</h2>
-            <form action="https://echo.htmlacademy.ru" method="post" class="details-goods container">
-                <fieldset class="form-cost-wrapper details-form-border">
-                    <legend class="color-title details-block-title">Cost</legend>
-                        <div class="range cost-range">
-                            <div class="field">
-                                <label for="cost-range" class="visually-hidden">Cost</label>
-                                <input id="cost-range" class="cost-range-input" type="range" min="0" max="500" value="100" step="50">
-                                <div class="cost-input-focus"></div>
-                                <div class="value left">0</div>
-                                <div class="value right">500</div>
+            <form class="goods-filter__form container" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="goods-filter__cost_wrapper goods-filter__fieldset_border">
+                    <legend class="goods-filter__legend_title">Cost</legend>
+                        <div class="goods-filter__range">
+                            <div class="goods-filter__cost-field">
+                                <label class="visually-hidden" for="cost-range">Cost</label>
+                                <input class="cost-range__input " id="cost-range" type="range" min="0" max="500" value="100" step="50">
+                                <div class="cost-range__input_focus"></div>
+                                <div class="cost-range__value cost-range__value_left">0</div>
+                                <div class="cost-range__value cost-range__value_right">500</div>
                             </div>
                         </div>
                 </fieldset>
-                <fieldset class="form-color-wrapper details-form-border">
-                    <legend class="color-title details-block-title">Color</legend>
-                    <ul class="form-color-list">
-                        <li class="color-list">
-                            <input id="check-black" type="checkbox" class="visually-hidden color-checkbox-input" checked>
-                            <label for="check-black" class="color-checkbox-label">Black</label>
+                <fieldset class="goods-filter__color_wrapper goods-filter__fieldset_border">
+                    <legend class="goods-filter__legend_title">Color</legend>
+                    <ul class="color__ul">
+                        <li class="color__li">
+                            <input class="color__input visually-hidden" id="check-black" type="checkbox" checked>
+                            <label class="color__label" for="check-black">Black</label>
                         </li>
-                        <li class="color-list">
-                            <input id="check-blue" type="checkbox" class="visually-hidden color-checkbox-input">
-                            <label for="check-blue" class="color-checkbox-label">Blue</label>
+                        <li class="color__li">
+                            <input class="color__input visually-hidden" id="check-blue" type="checkbox">
+                            <label class="color__label" for="check-blue">Blue</label>
                         </li>
-                        <li class="color-list">
-                            <input id="check-green" type="checkbox" class="visually-hidden color-checkbox-input">
-                            <label for="check-green" class="color-checkbox-label">Green</label>
+                        <li class="color__li">
+                            <input class="color__input visually-hidden" id="check-green" type="checkbox">
+                            <label class="color__label" for="check-green">Green</label>
                         </li>
-                        <li class="color-list">
-                            <input id="check-white" type="checkbox" class="visually-hidden color-checkbox-input">
-                            <label for="check-white" class="color-checkbox-label">White</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="form-delivery-wrapper details-form-border">
-                    <legend class="delivery-title details-block-title">Delivery</legend>
-                    <ul class="form-delivery-list">
-                        <li class="radio-list">
-                            <input id="radio-free" type="radio" name="delivery" value="no" class="visually-hidden delivery-radio-input">
-                            <label for="radio-free" class="delivery-radio-label">Free shipping</label>
-                        </li>
-                        <li class="radio-list">
-                            <input id="radio-fast" type="radio" name="delivery" value="yes" class="visually-hidden delivery-radio-input" checked>
-                            <label for="radio-fast" class="delivery-radio-label">Fast shipping</label>
+                        <li class="color__li">
+                            <input class="color__input visually-hidden" id="check-white" type="checkbox">
+                            <label class="color__label" for="check-white">White</label>
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset class="form-amount-wrapper details-form-border">
-                    <legend class="amount-title details-block-title">Amount</legend>
-                    <ul class="form-amount-list">
-                        <li class="amount-list">
-                            <input id="radio-0-5" type="radio" name="amount" value="yes" class="visually-hidden amount-radio-input" checked>
-                            <label for="radio-0-5" class="amount-radio-label">0-5</label>
-                            <div class="amount-input-focus"></div>
+                <fieldset class="goods-filter__delivery_wrapper goods-filter__fieldset_border">
+                    <legend class="goods-filter__legend_title">Delivery</legend>
+                    <ul class="delivery__ul">
+                        <li class="delivery__li">
+                            <input class="delivery__input visually-hidden" id="radio-free" type="radio" name="delivery" value="no">
+                            <label class="delivery__label" for="radio-free">Free shipping</label>
                         </li>
-                        <li class="amount-list">
-                            <input id="radio-10-20" type="radio" name="amount" value="no" class="visually-hidden amount-radio-input">
-                            <label for="radio-10-20" class="amount-radio-label">10-20</label>
-                            <div class="amount-input-focus"></div>
+                        <li class="delivery__li">
+                            <input class="delivery__input visually-hidden" id="radio-fast" type="radio" name="delivery" value="yes" checked>
+                            <label class="delivery__label" for="radio-fast">Fast shipping</label>
                         </li>
-                        <li class="amount-list">
-                            <input id="radio-20-50" type="radio" name="amount" value="no" class="visually-hidden amount-radio-input">
-                            <label for="radio-20-50" class="amount-radio-label">20-50</label>
-                            <div class="amount-input-focus"></div>
+                    </ul>
+                </fieldset>
+                <fieldset class="goods-filter__amount_wrapper goods-filter__fieldset_border">
+                    <legend class="goods-filter__legend_title">Amount</legend>
+                    <ul class="amount__ul">
+                        <li class="amount__li">
+                            <input class="amount__input visually-hidden" id="radio-0-5" type="radio" name="amount" value="yes" checked>
+                            <label class="amount__label" for="radio-0-5">0-5</label>
+                        </li>
+                        <li class="amount__li">
+                            <input class="amount__input visually-hidden" id="radio-10-20" type="radio" name="amount" value="no">
+                            <label class="amount__label" for="radio-10-20">10-20</label>
+                        </li>
+                        <li class="amount__li">
+                            <input class="amount__input visually-hidden" id="radio-20-50" type="radio" name="amount" value="no">
+                            <label class="amount__label" for="radio-20-50">20-50</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -93,62 +90,56 @@
                     "button-text": "Apply",
                     "tag": "button",
                     "type": "submit",
-                    "class": "details-goods-submit"
+                    "class": "goods-filter__button"
                   })
                 <!-- <button type="submit" class="details-goods-submit button">Apply</button> -->
             </form>
         </section>
         <section class="company-goods container">
             <h2 class="visually-hidden">Company goods</h2>
-            <ul class="goods-list">
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/chair-cover.png" alt="chair cover" width="380" height="385">
-                    <p class="goods-description">Snarky bean bag chair cover</p>
-                    <p class="goods-cost">$60.00 USD</p>
-                </li>
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/brass-frames.png" alt="brass frames" width="380" height="385">
-                    <p class="goods-description">Brass deco frames</p>
-                    <p class="goods-cost">$66.00 USD</p>
-                </li>
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/apron.png" alt="apron" width="380" height="385">
-                    <p class="goods-description">Cibo full apron</p>
-                    <p class="goods-cost">$60.00 USD</p>
-                </li>
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/gumball-machine.png" alt="gumball machine" width="380" height="385">
-                    <p class="goods-description">Gatcha gatcha gumball machine</p>
-                    <p class="goods-cost">$56.00 USD</p>
-                </li>
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/scented-candle.png" alt="scented candle" width="380" height="385">
-                    <p class="goods-description">Christmas advent scented candle</p>
-                    <p class="goods-cost">$29.00 USD</p>
-                </li>
-                <li class="goods-card">
-                    <a class="goods-link" href="#">
-                        <div class="user-attention">Learn more</div>
-                    </a>
-                    <img class="goods-img" src="/static/images/tangle-spinning-tea-light.png" alt="tangle spinning tea light" width="380" height="382">
-                    <p class="goods-description">Tangle sprinning tea light</p>
-                    <p class="goods-cost">$56.00 USD</p>
-                </li>
+            <ul class="company-goods__ul">
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/chair-cover.png",
+                    "alt": "chair cover",
+                    "description": "Snarky bean bag chair cover",
+                    "cost": "$60.00 USD",
+                })
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/brass-frames.png",
+                    "alt": "brass frames",
+                    "description": "Brass deco frames",
+                    "cost": "$66.00 USD",
+                })
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/apron.png",
+                    "alt": "apron",
+                    "description": "Cibo full apron",
+                    "cost": "$60.00 USD",
+                })
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/gumball-machine.png",
+                    "alt": "gumball machine",
+                    "description": "Gatcha gatcha gumball machine",
+                    "cost": "$56.00 USD",
+                })
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/scented-candle.png",
+                    "alt": "scented candle",
+                    "description": "Christmas advent scented candle",
+                    "cost": "$29.00 USD",
+                })
+                @@include('company-goods/index.html', {
+                    "href": "#",
+                    "img": "/static/images/tangle-spinning-tea-light.png",
+                    "alt": "tangle spinning tea light",
+                    "description": "Tangle sprinning tea light",
+                    "cost": "$56.00 USD",
+                })
             </ul>
         </section>
     @@include('pagination/index.html')

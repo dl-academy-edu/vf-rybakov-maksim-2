@@ -8,10 +8,10 @@
     color: #FFFFFF;
     border: 0;
     cursor: pointer;
-  }
-  .button:hover {
-    background-color: #C29974;
-  }
-  .button:active {
-    background-color: #CFAF91;
+    &:hover {
+      background-color: #C29974;
+    }
+    &:active {
+      background-color: #CFAF91;
+    }
   }

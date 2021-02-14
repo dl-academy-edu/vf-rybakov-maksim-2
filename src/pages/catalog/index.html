@@ -10,58 +10,76 @@
     <link href="style.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-  </head>
-  <body>
+</head>
+<body>
     @@include('header/index.html')
     <main>
-      <h1 class="page-title container">Category Products</h1>
-      <div class="breadcrumbs-block container">
-          <a href="/index.html"><p class="breadcrumbs-page-inactive">Home</p></a>
-          <p class="breadcrumbs-active-page">Catalog</p>
-      </div>
-      <section class="category-preview catalog-container">
-          <h2 class="category-preview-title visually-hidden">Categoryes preview</h2>
-          <ul class="category-cards">
-              <li class="category-card">
-                  <p class="category-card-title" >Apparel kids</p>
-                  <a class="category-card-link" href="#"></a>
-              </li>
-              <li class="category-card">
-                  <p class="category-card-title" >Holiday shop</p>
-                  <a class="category-card-link" href="#"></a>
-              </li>
-              <li class="category-card">
-                  <p class="category-card-title" >Toys</p>
-                  <a class="category-card-link" href="/pages/toys"></a>
-              </li>
-              <li class="category-card">
-                  <p class="category-card-title" >Accessories</p>
-                  <a class="category-card-link" href="#"></a>
-              </li>
-              <li class="category-card">
-                  <p class="category-card-title" >Sale</p>
-                  <a class="category-card-link" href="#"></a>
-              </li>
-              <li class="category-card">
-                  <p class="category-card-title" >Apparel adults</p>
-                  <a class="category-card-link" href="#"></a>
-              </li>
-          </ul>
-      </section>
-      <section class="product-description catalog-container">
-          <h2 class="product-description-title">Product Description</h2>
-          <p class="product-description-text">
-              Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
-          </p>
-          <p class="product-description-text">
-              A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
-          </p>
-          <p class="product-description-text">
-              The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
-          </p>
-      </section>
-      </main>
+    <h1 class="page-title container">Category Products</h1>
+    <div class="breadcrumbs container">
+        <a href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+        <p class="breadcrumbs__active-page">Catalog</p>
+    </div>
+    <section class="catalog__container">
+        <h2 class="visually-hidden">Categoryes preview</h2>
+        <ul class="catalog__cards">
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Apparel kids",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Holiday shop",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Toys",
+                "class-link": "category-card__link",
+                "href": "/pages/toys",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Accessories",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Sale",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Apparel adults",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+        </ul>
+    </section>
+    <section class="product-description catalog__container">
+        <h2 class="product-description__title">Product Description</h2>
+        <p class="product-description__text">
+            Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
+        </p>
+        <p class="product-description__text">
+            A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+        </p>
+        <p class="product-description__text">
+            The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+        </p>
+    </section>
+    </main>
     @@include('footer/index.html')
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
