@@ -74,33 +74,31 @@
             padding-top: 11px;
             padding-right: 20px;
             resize: none;
-            border: 1px solid rgba(0, 0, 0, 0.2);
+            border: 1px solid;
+            border-color: rgba(0, 0, 0, 0.2);
+            transition: width $transition-duration, margin-bottom $transition-duration, border-color $transition-duration;
             &:hover {
                 width: 100%;
                 -webkit-box-sizing: border-box;
                         box-sizing: border-box;
                 margin-bottom: 8px;
-                border: 1px solid rgba(0, 0, 0, 0.3);
+                border: 1px solid;
+                border-color: rgba(0, 0, 0, 0.3);
                 }
             }
     }
-    &__label-wrapper {
-        & input {
-            display: block;
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            padding: 12px 20px 11px 20px;
-            min-height: 50px;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-        &:hover input {
-            display: block;
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            padding: 12px 20px 11px 20px;
-            min-height: 50px;
+    &__input {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 12px 20px 11px 20px;
+        min-height: 50px;
+        font-size: 18px;
+        line-height: 25px;
+        color: #1E0606;
+        transition: border-color $transition-duration;
+        &:hover {
+            border-color: rgba(0, 0, 0, 0.3);
         }
     }
     &__label-consent {
@@ -112,6 +110,7 @@
         font-size: 14px;
         line-height: 16px;
         color: #1E0606;
+        cursor: pointer;
         &::before {
             content: '';
             position: absolute;
@@ -136,9 +135,7 @@
             -webkit-box-sizing: border-box;
                     box-sizing: border-box;
             border-radius: 3px;
-        }
-        &:hover {
-            cursor: pointer;
+            transition: border-color $transition-duration;
         }
     }
     &__input-consent {
@@ -148,8 +145,8 @@
             background-color: #E5EAF8;
         }
         &:focus + .index-popup__label-consent::after,
-        &:hover + .index-popup__label-consent::after  {
-            border: 2px solid #836E5B;
+        &:hover + .index-popup__label-consent::after {
+            border-color: #836E5B;
         }
     }
     &__button-subscribe {
@@ -170,9 +167,12 @@
         height: 15px;
         background-color: #97ace1;
         border: none;
-        &:hover .index-popup__close-svg{
+        cursor: pointer;
+        &:hover .index-popup__close-svg {
             fill-opacity: 0.5;
-            cursor: pointer;
         }
+    }
+    &__close-svg {
+        transition: fill-opacity $transition-duration;
     }
 }

@@ -47,6 +47,7 @@
       font-size: 16px;
       line-height: 22px;
       color: #FFFFFF;
+      transition: opacity $transition-duration;
       &:hover {
         opacity: 50%;
       }
@@ -57,6 +58,10 @@
     &_link {
       color: #FFFFFF;
       text-decoration: none;
+      transition: opacity $transition-duration;
+      &:focus {
+        opacity: 50%;
+      }
     }
   }
   &__connect {
@@ -78,9 +83,12 @@
       border: none;
       color: #EBEBEB;
       background-color: #666666;
-      border: 1px solid #666666;
-      &:hover,&:active {
-        border: 1px solid #FFFDFD;
+      border: 1px solid;
+      border-color: #666666;
+      transition: border-color .4s;
+      &:hover,
+      &:active {
+        border-color: #FFFDFD;
       }
       &::-webkit-input-placeholder {
         font-family: 'Open Sans', 'Arial', 'sans-serif';
@@ -151,6 +159,9 @@
       margin: 0;
       margin-right: 10px;
     }
+    &_svg-icon {
+      transition: opacity $transition-duration;
+    }
     &_svg {
       width: 30px;
       height: 30px;
@@ -160,11 +171,16 @@
       margin-right: 10px;
       border-radius: 50%;
       text-align: center;
-      &:hover .svg-icon {
+      &:hover .footer__social_svg-icon {
         opacity: 50%;
       }
-      &:active .svg-icon {
+      &:active .footer__social_svg-icon {
         opacity: 20%;
+      }
+    }
+    &_link {
+      &:focus .footer__social_svg-icon {
+        opacity: 50%;
       }
     }
   }
@@ -198,7 +214,9 @@
       margin: 0;
       text-decoration: none;
       color: #A2A2A2;
+      transition: color $transition-duration;
       &:hover,
+      &:focus,
       &:active {
         margin: 0;
         -webkit-text-decoration-line: underline;
@@ -213,7 +231,8 @@
     margin-top: 5px;
     padding: 0;
     border: none;
-    &:hover {
+    transition: $transition-duration; //не понял какое свойство указывать (color не воспринимается, поэтому оставил all)
+    &:hover,&:focus {
       color: #C29974;
       cursor: pointer;
     }
@@ -239,6 +258,7 @@
          -moz-appearance: none;
               appearance: none;
       background-repeat: repeat-x;
+      // transition: background-image $transition-duration, background-color $transition-duration;
       &:hover {
         background-image: url(/static/images/Star-hover.svg);
         background-color: #434343;

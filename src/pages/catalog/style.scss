@@ -27,6 +27,7 @@
     min-height: 270px;
     margin-bottom: 20px;
     margin-right: 20px;
+    cursor: pointer;
     &:nth-child(6n+1) {
         margin-left: -200px;
     }
@@ -52,15 +53,16 @@
         font-weight: bold;
         font-size: 26px;
         line-height: 32px;
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: transparent;
         text-transform: uppercase;
         text-align: center;
         color: #FFFFFF;
         width: 192px;
+        transition: text-decoration-color .4s;
     }
-    &:hover .category-card__title {
-        text-decoration: underline;
-        cursor: pointer;
+    &:hover .category-card__title { //при фокусе не могу настроить
+        text-decoration-color: #FFFFFF;
     }
     &:nth-child(1) {
         width: 280px;

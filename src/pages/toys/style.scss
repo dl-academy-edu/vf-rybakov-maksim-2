@@ -62,8 +62,12 @@
                 border-radius: 50%;
                 background: #FFFFFF;
                 cursor: pointer;
+                transition: border-color .4s;
             }
             &::-webkit-slider-thumb:hover {
+                border-color: #836E5B;
+            }
+            &::-webkit-slider-thumb:focus {
                 border-color: #836E5B;
             }
             &::-moz-range-thumb{
@@ -107,11 +111,13 @@
             width: 220px;
             height: 30px;
             border-radius: 8px;
-            border: none;
+            border: 2px solid;
+            border-color: transparent;
             z-index: -1;
+            transition: border-color .4s;
         }
         &:focus ~ &_focus {
-            border: 2px solid #836E5B;
+            border-color: #836E5B;
         }
     }
     &__value {
@@ -145,9 +151,12 @@
         position: relative;
         padding-left: 28px;
         margin-right: 33px;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: text-decoration .4s;
         &:hover {
-            text-decoration: underline;
-            cursor: pointer;
+            text-decoration-color: #1E0606;
         }
         &::before {
             content: '';
@@ -169,20 +178,26 @@
             left: 0;
             width: 19px;
             height: 19px;
-            border: 2px solid #C29974;
+            border: 2px solid;
+            border-color: #C29974;
             -webkit-box-sizing: border-box;
                     box-sizing: border-box;
             border-radius: 3px;
+            transition: border-color .4s;
         }
     }
     &__input:checked + &__label::after {
         background-image: url('/static/images/toys-checkbox.png');
         background-repeat: no-repeat;
         background-color: #FFFFFF;
+        border: 2px solid #836E5B;
     }
     &__input:hover + &__label::after, 
     &__input:focus + &__label::after {
-        border: 2px solid #836E5B;
+        border-color: #836E5B;
+    }
+    &__input:focus + &__label {
+        text-decoration-color: #1E0606;
     }
 }
 
@@ -199,9 +214,12 @@
         position: relative;
         padding-left: 29px;
         margin-right: 33px;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        cursor: pointer;
+        transition: text-decoration-color .4s;
         &:hover {
-            text-decoration: underline;
-            cursor: pointer;
+            text-decoration-color: #1E0606;
         }
         &::before {
             content: '';
@@ -210,8 +228,10 @@
             left: 0;
             width: 20px;
             height: 20px;
-            border: 2px solid #C29974;
+            border: 2px solid;
+            border-color: #C29974;
             border-radius: 50%;
+            transition: border-color .4s;
         }
         &::after {
             content: '';
@@ -221,7 +241,8 @@
             width: 12px;
             height: 12px;
             background: #C29974;
-            border: 2px solid #C29974;
+            border: 2px solid;
+            border-color: #C29974;
             opacity: 0;
             border-radius: 50%;
         }
@@ -229,7 +250,10 @@
     &__input {
         &:hover + .delivery__label::before, 
         &:focus + .delivery__label::before {
-            border: 2px solid #836E5B;
+            border-color: #836E5B;
+        }
+        &:focus + .delivery__label {
+            text-decoration-color: #1E0606;
         }
         &:checked+.delivery__label::after {
             opacity: 1;
@@ -257,12 +281,14 @@
         margin: 0 auto;
         text-align: center;
         background-color: #FFFFFF;
-        border: 2px solid #FFFFFF;
+        border: 2px solid;
+        border-color: #FFFFFF;
+        cursor: pointer;
+        transition: background-color .4s, border-color .4s;
         &:hover {
             background-color: #EDDEEB;
-            border: 2px solid #EDDEEB;
+            border-color: #EDDEEB;
             color: #877379;
-            cursor: pointer;
         }
     }
     &__input {
@@ -271,7 +297,7 @@
             border: 2px solid #F3D0DB;
         }
         &:focus ~ .amount__label {
-            border: 2px solid #836E5B;
+            border-color: #836E5B;
         }
     }
 }

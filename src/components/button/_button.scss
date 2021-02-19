@@ -8,7 +8,8 @@
     color: #FFFFFF;
     border: 0;
     cursor: pointer;
-    &:hover {
+    transition: background-color $transition-duration;
+    &:hover,&:focus {
       background-color: #C29974;
     }
     &:active {

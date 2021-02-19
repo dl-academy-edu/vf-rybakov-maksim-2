@@ -16,7 +16,10 @@
         right: 0;
         text-decoration: none;
         &:hover ~ .blog-card__title {
-            text-decoration: underline;
+            text-decoration-color: $blog-card-title-color;
+        }
+        &:focus ~ .blog-card__title {
+            text-decoration-color: $blog-card-title-color;
         }
     }
     &__date {
@@ -32,8 +35,10 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
-        text-decoration: none;
-        color: #1E0606;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        color: $blog-card-title-color;
+        transition: text-decoration-color $transition-duration;
     }
     &__preview {
         margin-top: 14px;

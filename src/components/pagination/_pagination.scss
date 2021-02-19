@@ -18,8 +18,15 @@
         background: none;
         margin: 0;
         padding: 0;
-        &:hover path {
+        cursor: pointer;
+        &:focus &_svg-path {
             fill: #C29974;
+        }
+        &:hover &_svg-path {
+            fill: #C29974;
+        }
+        &_svg-path {
+            transition: $transition-duration; //не знаю как свойство fill указать
         }
         &:active path {
             opacity: 50%;
@@ -62,10 +69,11 @@
             padding-left: 32px;
             border: 0;
             background: none;
-            &:hover {
-                color: #1E0606;
+            cursor: pointer;
+            transition: opacity $transition-duration;
+            &:hover,
+            &:focus {
                 opacity: 0.5;
-                cursor: pointer;
             }
         }
     }

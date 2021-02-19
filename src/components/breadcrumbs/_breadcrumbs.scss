@@ -19,9 +19,16 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 15px;
-    & a {
+        margin-top: 15px;
+    &__link {
         text-decoration: none;
+        transition: opacity $transition-duration;
+        &:hover,&:focus {
+            opacity: 50%;
+        }
+        &:active {
+            opacity: 20%;
+        }
     }
     &__page-inactive {
         position: relative;
@@ -32,12 +39,6 @@
         font-size: 20px;
         line-height: 25px;
         color: #1E0606;
-        &:hover {
-            opacity: 50%;
-        }
-        &:active {
-            opacity: 20%;
-        }
         &::before {
             content: url(/static/images/breadcrumbs-vector.png);
             position: absolute;
