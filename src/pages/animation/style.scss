@@ -1,3 +1,118 @@
+
+$transition-duration: 15s;
+
+@keyframes move-taxi {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-1370px);
+    }
+    70% {
+        transform: translateX(-1370px);
+    }
+    100% {
+        transform: translateX(-2500px);
+    }
+}
+
+@keyframes woman-message {
+    0% {
+        transform: scale(0);
+    }
+    11% {
+        transform: scale(0);
+    }
+    15% {
+        transform: scale(1);
+    }
+    26% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes hand {
+    0% {
+        transform: rotate(150deg);
+    }
+    20% {
+        transform: rotate(150deg);
+    }
+    26% {
+        transform: rotate(150deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    48% {
+        transform: rotate(0deg);
+    }
+    52% {
+        transform: rotate(150deg);
+    }
+    100% {
+        transform: rotate(150deg);
+    }
+}
+
+@keyframes man-message {
+    0% {
+        transform: scale(0);
+    }
+    31% {
+        transform: scale(0);
+    }
+    35% {
+        transform: scale(1);
+    }
+    41% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes taxi-message {
+    0% {
+        transform: scale(0);
+    }
+    47% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0);
+    }
+    54% {
+        transform: scale(1);
+    }
+    66% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+
+
+
+
+
+
 .animation {
     position: relative;
     &__clouds {
@@ -18,17 +133,28 @@
         left: 0;
         z-index: 1;
     }
-    &__lanterns {
-        position: absolute;
-        top: 224px;
-        left: 432px;
-        z-index: 2;
+    &__lantern {
+        &_left {
+            position: absolute;
+            top: 224px;
+            left: 432px;
+            z-index: 2;
+        }
+        &_right {
+            position: absolute;
+            top: 224px;
+            left: 1307px;
+            z-index: 2;
+        }
     }
     &__taxi {
         position: absolute;
         top: 453px;
-        right: 0;
+        left: 1450px;
         z-index: 3;
+        animation: move-taxi $transition-duration;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
         &_group {
             position: relative;
         }
@@ -36,6 +162,8 @@
             position: absolute;
             top: -56px;
             left: 314px;
+            animation: taxi-message $transition-duration;
+            animation-iteration-count: infinite;
         }
     }
     &__nearest-lantern {
@@ -56,6 +184,8 @@
             position: absolute;
             top: -99px;
             left: -90px;
+            animation: woman-message $transition-duration;
+            animation-iteration-count: infinite;
         }
         &_suitcases {
             position: absolute;
@@ -77,12 +207,18 @@
             position: absolute;
             top: -84px;
             left: -10px;
+            animation: man-message $transition-duration;
+            animation-iteration-count: infinite;
         }
         &_hand {
             position: absolute;
             top: -38px;
             left: 0px;
+            transform: rotate(150deg);
+            transform-origin: 13% 91%;
             z-index: -1;
+            animation: hand $transition-duration;
+            animation-iteration-count: infinite;
         }
     }
 }
