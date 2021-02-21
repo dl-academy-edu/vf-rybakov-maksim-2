@@ -1,0 +1,88 @@
+.animation {
+    position: relative;
+    &__clouds {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
+    &__city {
+        padding-top: 188px;
+        padding-bottom: 70px;
+        right: 0;
+        width: 100%;
+    }
+    &__cars {
+        position: absolute;
+        top: 462px;
+        left: 0;
+        z-index: 1;
+    }
+    &__lanterns {
+        position: absolute;
+        top: 224px;
+        left: 432px;
+        z-index: 2;
+    }
+    &__taxi {
+        position: absolute;
+        top: 453px;
+        right: 0;
+        z-index: 3;
+        &_group {
+            position: relative;
+        }
+        &_message {
+            position: absolute;
+            top: -56px;
+            left: 314px;
+        }
+    }
+    &__nearest-lantern {
+        position: absolute;
+        top: 214px;
+        left: 1026px;
+        z-index: 3;
+    }
+    &__woman {
+        position: absolute;
+        top: 508px;
+        left: 182px;
+        z-index: 4;
+        &_wrapper {
+            position: relative;
+        }
+        &_message {
+            position: absolute;
+            top: -99px;
+            left: -90px;
+        }
+        &_suitcases {
+            position: absolute;
+            bottom: 5px;
+            left: -10px;
+        }
+    }
+    &__man {
+        position: absolute;
+        top: 422px;
+        left: 288px;
+        z-index: 5;
+        &_wrapper {
+            position: relative;
+        }
+        &_body {
+        }
+        &_message {
+            position: absolute;
+            top: -84px;
+            left: -10px;
+        }
+        &_hand {
+            position: absolute;
+            top: -38px;
+            left: 0px;
+            z-index: -1;
+        }
+    }
+}
