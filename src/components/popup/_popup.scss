@@ -6,10 +6,20 @@
     display: none;
     top: 0px;
     left: 50%;
-    width: 680px;
+    width: 355px;
     margin: 0 auto;
-    margin-left: -340px;
-    margin-top: 113px;
+    margin-top: 128px;
+    transform: translate(-50%,0);
+    height: 555px;
+    overflow-y: auto;
+    @media (min-width: 760px) {
+        width: 648px;
+        margin-top: 241px;
+    }
+    @media (min-width: 801px) {
+        width: 680px;
+        margin-top: 113px;
+    }
     &__overlay {
         position: fixed;
         display: none;
@@ -18,6 +28,7 @@
         width: 100%;
         height: 100vh;
         background: rgba(125, 151, 218, 0.8);
+        z-index: 1;
         &.open {
             display: block;
         }
@@ -29,41 +40,79 @@
         margin: 0;
     }
     &__fieldset {
-        width: 680px;
         margin: 0;
         padding: 0;
         border-width: 0;
-        padding: 44px 40px;
+        padding: 25px 25px;
         background-color: #E5EAF8;
+        height: 555px;
+        overflow-y: auto;
+        @media (min-width: 767px) {
+            padding: 42px 30px;
+        }
     }
     &__inputs_wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__label-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    &__label-wrapper_top {
+        width: 100%;
+    }
+    &__label-wrapper_center {
+        width: 100%;
+        @media (min-width: 767px) {
+            width: 50%;
+        }
+    }
+    &__label-wrapper_bottom {
+        width: 100%;
     }
     &__label {
         display: block;
-        margin-bottom: 6px;
+        width: 100%;
+        margin-bottom: 5px;
         font-family: 'Roboto', 'Arial', 'sans-serif';
         font-size: 14px;
         line-height: 16px;
         color: #1E0606;
+        @media (min-width: 767px) {
+            margin-bottom: 6px;
+        }
     }
+    
     &__input {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 12px 20px 11px 20px;
+        min-height: 50px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1E0606;
+        transition: border-color $transition-duration;
+        @media (min-width: 767px) {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &:hover {
+            border-color: rgba(0, 0, 0, 0.3);
+        }
         &_user-name {
-            width: 600px;
+            width: 100%;
         }
         &_user-phone {
-            width: 290px;
+            width: 100%;
         }
         &_user-email {
-            width: 290px;
+            width: 100%;
         }
         &_user-message {
             width: 100%;
@@ -84,21 +133,7 @@
                 margin-bottom: 8px;
                 border: 1px solid;
                 border-color: rgba(0, 0, 0, 0.3);
-                }
             }
-    }
-    &__input {
-        display: block;
-        margin-bottom: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        padding: 12px 20px 11px 20px;
-        min-height: 50px;
-        font-size: 18px;
-        line-height: 25px;
-        color: #1E0606;
-        transition: border-color $transition-duration;
-        &:hover {
-            border-color: rgba(0, 0, 0, 0.3);
         }
     }
     &__label-consent {
@@ -151,22 +186,32 @@
     }
     &__button-subscribe {
         display: block;
-        margin-top: 20px;
-        margin-right: 300px;
+        margin-top: 15px;
         padding: 9px 22px;
+        font-size: 14px;
+        line-height: 19px;
         text-transform: uppercase;
         color: #E1E1E1;
         border: 0;
         background-color: #C1C1C1;
+        @media (min-width: 767px) {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
     &__button-close {
         position: absolute;
-        top: 0;
-        right: -25px;
+        top: -25px;
+        right: 7px;
         width: 15px;
         height: 15px;
         background-color: #97ace1;
         border: none;
+        @media (min-width: 801px) {
+            top: 0;
+            right: -25px;
+        }
         cursor: pointer;
         &:hover .index-popup__close-svg {
             fill-opacity: 0.5;
