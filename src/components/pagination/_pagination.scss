@@ -1,15 +1,11 @@
 /*pagination block*/
 
 .pagination {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start;
+            align-items: center;
     margin-right: 3px;
     margin-left: 3px;
     margin-bottom: 55px;
@@ -25,6 +21,14 @@
         &:hover &_svg-path {
             fill: #C29974;
         }
+        &_svg {
+            width: 12px;
+            height: 24px;
+            @media (min-width: 760px) {
+                width: 13px;
+                height: 26px;
+            }
+        }
         &_svg-path {
             transition: $transition-duration; //не знаю как свойство fill указать
         }
@@ -38,18 +42,22 @@
         }
     }
     &__pages {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
+        align-items: center;
         margin-bottom: 0;
         margin-top: 0;
+        margin-right: -25px;
+        margin-left: -25px;
         padding: 0;
         max-width: 600px;
+        @media (min-width: 760px) {
+            margin-right: -32px;
+            margin-left: -32px;
+        }
         &_li {
             padding: 0;
-            padding-top: 3px;
+            align-items: center;
         }
         &_active {
             color: #C29974;
@@ -60,16 +68,22 @@
         &_button {
             font-family: 'Montserrat', 'Arial', 'sans-serif';
             font-weight: bold;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 17.07px;
             text-transform: uppercase;
             text-decoration: none;
             padding: 0;
-            padding-right: 32px;
-            padding-left: 32px;
+            padding-right: 25px;
+            padding-left: 25px;
             border: 0;
             background: none;
             cursor: pointer;
+            @media (min-width: 760px) {
+                padding-right: 32px;
+                padding-left: 32px;
+                font-size: 16px;
+                line-height: 19.5px;
+            }
             transition: opacity $transition-duration;
             &:hover,
             &:focus {

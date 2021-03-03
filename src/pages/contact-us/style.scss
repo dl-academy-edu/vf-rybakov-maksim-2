@@ -3,198 +3,64 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 59px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    @media (min-width: 801px) {
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+    @media (min-width: 1101px) {
+        flex-direction: row;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 
 .contact__wrapper {
-    margin-right: 120px;
-}
-
-.contact-form {
-    margin: 0;
-    background-color: #E5EAF8;
-    &__inputs {
-        width: 680px;
-        margin: 0;
-        padding: 0;
-        border-width: 0;
-        padding: 42px 40px;
-        background-color: #E5EAF8;
-    }
-    &__wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-    }
-    &__input-title {
-        font-family: 'Open Sans', 'Arial', 'sans-serif';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        color: #1E0606;
-    }
-    &__input-name {
-        width: 600px;
-        &::-webkit-input-placeholder {
-            font-family: 'Open Sans', 'Arial', 'sans-serif';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-        &::-moz-placeholder {
-            font-family: 'Open Sans', 'Arial', 'sans-serif';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-        &:-ms-input-placeholder {
-            font-family: 'Open Sans', 'Arial', 'sans-serif';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-        &::-ms-input-placeholder {
-            font-family: 'Open Sans', 'Arial', 'sans-serif';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-        &::placeholder {
-            font-family: 'Open Sans', 'Arial', 'sans-serif';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-        }
-    }
-    &__label-wrapper {
-        & input {
-            display: block;
-            margin-bottom: 20px;
-            border: 1px solid;
-            border-color: rgba(0, 0, 0, 0.2);
-            padding: 14px 20px 10px 20px;
-            min-height: 50px;
-            font-size: 18px;
-            line-height: 25px;
-            color: #1E0606;
-            transition: border-color .4s;
-            &:hover {
-                border-color: rgba(0, 0, 0, 0.3);
-            }
-        }
-    }
-    &__input-phone {
-        width: 290px;
-    }
-    &__input-email {
-        width: 290px;
-    }
-    &__input-message {
-        width: 100%;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        margin-bottom: 11px;
-        padding-top: 14px;
-        padding-left: 20px;
-        padding-top: 11px;
-        padding-right: 20px;
-        resize: none;
-        border: 1px solid;
-        border-color: rgba(0, 0, 0, 0.2);
-        transition: border-color .4s;
-        &:hover {
-            border-color: rgba(0, 0, 0, 0.3);
-        }
-    }
-    &__label-processing {
-        position: relative;
-        margin: 0;
-        padding-top: 2px;
-        padding-left: 34px;
-        font-family: 'Roboto', 'Arial', 'sans-serif';
-        font-size: 14.8px;
-        line-height: 16px;
-        color: #1E0606;
-        cursor: pointer;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 19px;
-            height: 19px;
-            border: 2px solid #C29974;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            border-radius: 3px;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            background-image: none;
-            top: 0;
-            left: 0;
-            width: 19px;
-            height: 19px;
-            border: 2px solid;
-            border-color: #C29974;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            border-radius: 3px;
-            transition: border-color .4s;
-        }
-    }
-    &__input-processing {
-        &:checked + .contact-form__label-processing::after {
-            background-image: url('/static/images/index-checkbox.png');
-            background-repeat: no-repeat;
-            background-color: #E5EAF8;
-        }
-        &:focus + .contact-form__label-processing::after,
-        &:hover + .contact-form__label-processing::after  {
-            border-color: #836E5B;
-        }
-    }
-    &__button-subscribe {
-        display: block;
-        margin-top: 19px;
-        margin-right: 300px;
-        padding: 9px 22px;
-        text-transform: uppercase;
-        border: 0;
-    }
+    // margin-right: 0;
+    // @media (min-width: 760px) {
+    //     margin-right: 50px;
+    // }
+    // @media (min-width: 1251px) {
+    //     margin-right: 120px;
+    // }
 }
 
 .contact__description {
+    text-align: center;
+    margin-left: 30px;
+    @media (min-width: 1101px) {
+        display: block;
+        text-align: left;
+        width: 380px;
+        min-width: 200px;
+    }
     &_text {
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 19px;
         color: #1E0606;
+        @media (min-width: 801px) {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
     &_slogan {
         margin-top: 20px;
+        margin-bottom: 25px;
         font-family: 'Montserrat', 'Arial', 'sans-serif';
         font-weight: 600;
-        font-size: 26px;
+        font-size: 24px;
         line-height: 34px;
         text-transform: uppercase;
         color: #C29974;
+        @media (min-width: 801px) {
+            margin-bottom: 45px;
+            font-size: 26px;
+        }
     }
 }

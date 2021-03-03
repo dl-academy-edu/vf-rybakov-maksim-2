@@ -24,39 +24,42 @@
     <section class="contact-main container">
         <h2 class="visually-hidden">Contact form</h2>
         <div class="contact__wrapper">
-            <form class="contact-form" name="user-message" action="https://echo.htmlacademy.ru" method="POST">
-                <fieldset class="contact-form__inputs">
-                    <div class="contact-form__wrapper">
-                        <div class="contact-form__label-wrapper">
-                            <label class="contact-form__input-title" for="popup-user-name">Name</label>
-                            <input class="contact-form__input-name" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
-                        </div>
-                        <div class="contact-form__label-wrapper">
-                            <label class="contact-form__input-title" for="popup-user-phone">Phone</label>
-                            <input class="contact-form__input-phone" id="popup-user-phone" type="text">
+            <form class="index-popup__form" id="popup" name="user-message" method="POST" action="https://echo.htmlacademy.ru">
+                <fieldset class="index-popup__fieldset">
+                    <div class="index-popup__inputs_wrapper">
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_top">
+                            <label class="index-popup__label" for="popup-user-name">Name</label>
+                            <input class="index-popup__input_user-name index-popup__input" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
                         </div>
                         
-                        <div class="contact-form__label-wrapper">
-                            <label class="contact-form__input-title" for="popup-user-email">Email</label>
-                            <input class="contact-form__input-email" id="popup-user-email" type="email">
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_center">
+                            <label class="index-popup__label index-popup__label_center" for="popup-user-phone">Phone</label>
+                            <input class="index-popup__input_user-phone index-popup__input" id="popup-user-phone" type="text">
                         </div>
                         
-                        <div class="contact-form__label-wrapper">
-                            <label class="contact-form__input-title" for="contact-user-message">Message</label>
-                            <textarea class="contact-form__input-message" name="user-message" id="contact-user-message" cols="80" rows="8"></textarea>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_center">
+                            <label class="index-popup__label index-popup__label_center" for="popup-user-email">Email</label>
+                            <input class="index-popup__input_user-email index-popup__input" id="popup-user-email" type="email">
                         </div>
                         
-                        <div class="contact-form__label-wrapper">
-                            <input class="contact-form__input-processing visually-hidden" id="user-consent" type="checkbox" checked>
-                            <label class="contact-form__label-processing" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_bottom">
+                            <label class="index-popup__label" for="popup-user-message">Message</label>
+                            <textarea class="index-popup__input_user-message index-popup__input" name="user-message" id="popup-user-message" cols="80" rows="8"></textarea>
                         </div>
-                        @@include('button/index.html', {
-                            "button-text": "Submit",
-                            "tag": "button",
-                            "type": "submit",
-                            "class": "contact-form__button-subscribe"
-                          })
-                        <!-- <button class="contact-subscribe button" type="submit">Submit</button> -->
+                        
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_bottom">
+                            <input class="index-popup__input-consent visually-hidden" id="user-consent" type="checkbox" checked>
+                            <label class="index-popup__label-consent" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
+                        </div>
+                        
+                        <div class="index-popup__label-wrapper">
+                            @@include('button/index.html', {
+                                "button-text": "Submit",
+                                "tag": "button",
+                                "type": "submit",
+                                "class": "index-popup__button-subscribe"
+                            })
+                        </div>
                     </div>
                 </fieldset>
             </form>
