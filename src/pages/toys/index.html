@@ -10,8 +10,8 @@
     <link href="style.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-  </head>
-  <body>
+</head>
+<body>
     @@include('header/index.html')
     <main>
         <h1 class="page-title container"> Toy for kids</h1>
@@ -97,50 +97,52 @@
         </section>
         <section class="company-goods container">
             <h2 class="visually-hidden">Company goods</h2>
-            <ul class="company-goods__ul">
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/chair-cover.png",
-                    "alt": "chair cover",
-                    "description": "Snarky bean bag chair cover",
-                    "cost": "$60.00 USD",
-                })
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/brass-frames.png",
-                    "alt": "brass frames",
-                    "description": "Brass deco frames",
-                    "cost": "$66.00 USD",
-                })
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/apron.png",
-                    "alt": "apron",
-                    "description": "Cibo full apron",
-                    "cost": "$60.00 USD",
-                })
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/gumball-machine.png",
-                    "alt": "gumball machine",
-                    "description": "Gatcha gatcha gumball machine",
-                    "cost": "$56.00 USD",
-                })
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/scented-candle.png",
-                    "alt": "scented candle",
-                    "description": "Christmas advent scented candle",
-                    "cost": "$29.00 USD",
-                })
-                @@include('company-goods/index.html', {
-                    "href": "#",
-                    "img": "/static/images/tangle-spinning-tea-light.png",
-                    "alt": "tangle spinning tea light",
-                    "description": "Tangle sprinning tea light",
-                    "cost": "$56.00 USD",
-                })
-            </ul>
+            <div class="company-goods__ul_wrapper">
+                <ul class="company-goods__ul">
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/chair-cover.png",
+                        "alt": "chair cover",
+                        "description": "Snarky bean bag chair cover",
+                        "cost": "$60.00 USD",
+                    })
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/brass-frames.png",
+                        "alt": "brass frames",
+                        "description": "Brass deco frames",
+                        "cost": "$66.00 USD",
+                    })
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/apron.png",
+                        "alt": "apron",
+                        "description": "Cibo full apron",
+                        "cost": "$60.00 USD",
+                    })
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/gumball-machine.png",
+                        "alt": "gumball machine",
+                        "description": "Gatcha gatcha gumball machine",
+                        "cost": "$56.00 USD",
+                    })
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/scented-candle.png",
+                        "alt": "scented candle",
+                        "description": "Christmas advent scented candle",
+                        "cost": "$29.00 USD",
+                    })
+                    @@include('company-goods/index.html', {
+                        "href": "#",
+                        "img": "/static/images/tangle-spinning-tea-light.png",
+                        "alt": "tangle spinning tea light",
+                        "description": "Tangle sprinning tea light",
+                        "cost": "$56.00 USD",
+                    })
+                </ul>
+            </div>
         </section>
     @@include('pagination/index.html')
         </main>

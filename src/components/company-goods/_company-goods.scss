@@ -1,10 +1,21 @@
 .company-goods {
     &__card {
         position: relative;
-        width: 380px;
-        margin-right: 20px;
         padding-top: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+        padding-right: 8px;
+        padding-left: 8px;
+        width: 50%;
+        min-width: 160px;
+        @media (min-width: 620px) {
+            width: 33.33%;
+            max-width: 380px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        @media (min-width: 820px) {
+            padding-bottom: 20px;
+        }
     }
     &__link {
         position: absolute;
@@ -63,15 +74,34 @@
         overflow: hidden;
         transition: background-color $transition-duration, font-size $transition-duration;
     }
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     &__description {
         margin-top: 25px;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: 12px;
+        line-height: 16px;
         text-transform: uppercase;
         text-align: center;
+        @media (min-width: 620px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
     &__cost {
         font-weight: bold;
         text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+        @media (min-width: 620px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        @media (min-width: 820px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
 }
