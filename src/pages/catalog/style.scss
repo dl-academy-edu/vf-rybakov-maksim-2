@@ -2,7 +2,12 @@
     &__container {
         margin: 0 auto;
         max-width: 1400px;
-        padding: 0 310px;
+        // @media (min-width: 360px) and (max-width: 450px) {
+        //     margin-right: -30px;
+        // }
+        // @media (min-width: 760px) and (max-width: 850px) {
+        //     margin-right: -30px;
+        // }
     }
     &__cards {
         display: -webkit-box;
@@ -10,32 +15,58 @@
         display: flex;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+        justify-content: center;
         margin: 0;
         margin-top: 50px;
+        margin-right: -8px;
+        margin-left: -8px;
         padding: 0;
+        @media (min-width: 680px) {
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+        @media (min-width: 797px) {
+            justify-content: start;
+        }
     }
 }
 
 .category-card {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-height: 270px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    align-items: center;
+    min-width: 159px;
+    min-height: 154px;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+    background-size: auto auto;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90% auto;
     cursor: pointer;
-    &:nth-child(6n+1) {
-        margin-left: -200px;
+    @media (min-width: 680px) {
+        min-width: 203px;
+        min-height: 196px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-size: contain;
     }
-    &:nth-child(6n+6) {
-        margin-right: -150px;
+    @media (min-width: 1000px) {
+        min-width: 240px;
+        min-height: 232px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
-    &:nth-child(1n+4) {
-        margin-top: 3px;
+    @media (min-width: 1150px) {
+        min-width: 280px;
+        min-height: 270px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
     &__link {
         position: absolute;
@@ -49,77 +80,89 @@
     &__title {
         display: block;
         margin: auto;
+        max-width: 139px;
         font-family: 'Montserrat', 'Arial', 'sans-serif';
         font-weight: bold;
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 18px;
+        line-height: 22px;
         text-decoration: underline;
         text-decoration-color: transparent;
         text-transform: uppercase;
         text-align: center;
         color: #FFFFFF;
-        width: 192px;
         transition: text-decoration-color .4s;
+        @media (min-width: 680px) {
+            max-width: 185px;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        @media (min-width: 1140px) {
+            max-width: 192px;
+            font-size: 26px;
+            line-height: 32px;
+        }
     }
     &:hover .category-card__title { //при фокусе не могу настроить
         text-decoration-color: #FFFFFF;
     }
     &:nth-child(1) {
-        width: 280px;
         background-color: #DBE4DB;
         background-image: url(/static/images/apparel-kids.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center;
     }
     &:nth-child(2) {
-        width: 280px;
         background-color: #EADDD3;
         background-image: url(/static/images/holiday-shop.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center
+        background-size: auto 95%;
     }
     &:nth-child(3) {
-        width: 280px;
         background-color: #F8F2DA;;
         background-image: url(/static/images/toys.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center
     }
     &:nth-child(4) {
-        width: 280px;
         background-color: #D5D4E1;
         background-image: url(/static/images/accessories.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center
+        @media (min-width: 1230px) {
+            margin-left: 100px;
+        }
+        @media (min-width: 1340px) {
+            margin-left: 200px;
+        }
     }
     &:nth-child(5) {
-        width: 280px;
         background-color: #F3D0DB;
         background-image: url(/static/images/pink-flamingo.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center
+        
     }
     &:nth-child(6) {
-        width: 280px;
         background-color: #E5EAF8;
         background-image: url(/static/images/pink-shirt.png);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center center
     }
 }
 
 
 .product-description {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    @media (min-width: 630px) {
+        padding-right: 110px;
+        padding-left: 60px;
+    }
+    @media (min-width: 800px) {
+        padding-left: 110px;
+    }
+    @media (min-width: 1230px) {
+        margin-bottom: 60px;
+        padding-right: 210px;
+        padding-left: 210px;
+    }
+    @media (min-width: 1340px) {
+        padding-right: 310px;
+        padding-left: 310px;
+    }
     &__title {
         margin: 0;
-        margin-top: 35px;
+        margin-top: 14px;
         padding-bottom: 10px;
         font-family: 'Montserrat', 'Arial', 'sans-serif';
         font-weight: bold;
@@ -127,11 +170,20 @@
         line-height: 46px;
         text-transform: uppercase;
         color: #1E0606;
+        @media (min-width: 549px) {
+            margin-top: 20px;
+        }
+        @media (min-width: 801px) {
+            margin-top: 30px;
+        }
     }
     &__text {
         margin: 0;
         margin-top: 17px;
-        padding-right: 100px;
+        padding-right: 0;
         color: #1E0606;
+        @media (min-width: 800px) {
+            padding-right: 100px;
+        }
     }
 }
