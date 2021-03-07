@@ -3,16 +3,16 @@ $transition-duration: 15s;
 
 @keyframes move-taxi {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
     50% {
-        transform: translateX(-1370px);
+        transform: translateX(-145%);
     }
     70% {
-        transform: translateX(-1370px);
+        transform: translateX(-145%);
     }
     100% {
-        transform: translateX(-2500px);
+        transform: translateX(-290%);
     }
 }
 
@@ -114,109 +114,146 @@ $transition-duration: 15s;
 
 
 .animation {
+    display: block;
     position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
     &__clouds {
-        position: absolute;
-        top: 50px;
-        right: 0;
+        display: block;
         width: 100%;
+        height: auto;
+    }
+    &__clouds-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 1400px;
     }
     &__city {
-        padding-top: 188px;
-        padding-bottom: 70px;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    &__city-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    &__cars-img {
+        position: absolute;
+        top: 43%;
         right: 0;
         width: 100%;
-    }
-    &__cars {
-        position: absolute;
-        top: 462px;
-        left: 0;
-        z-index: 1;
+        height: auto;
     }
     &__lantern {
+        width: 100%;
         &_left {
             position: absolute;
-            top: 224px;
-            left: 432px;
-            z-index: 2;
+            top: 6%;
+            left: 31%;
+            width: 10.764%;
+            height: auto;
         }
         &_right {
             position: absolute;
-            top: 224px;
-            left: 1307px;
-            z-index: 2;
+            top: 6%;
+            right: -4%;
+            width: 10.764%;
+            height: auto;
         }
     }
-    &__taxi {
+    &__taxi-img {
         position: absolute;
-        top: 453px;
-        left: 1450px;
-        z-index: 3;
+        top: 42%;
+        right: -65%;
+        width: 63.295%;
+        height: auto;
         animation: move-taxi $transition-duration;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        &_group {
-            position: relative;
-        }
-        &_message {
-            position: absolute;
-            top: -56px;
-            left: 314px;
-            animation: taxi-message $transition-duration;
-            animation-iteration-count: infinite;
-        }
+    }
+    &__taxi-message {
+        position: absolute;
+        top: 34%;
+        right: 56%;
+        width: 11.464%;
+        height: auto;
+        animation: taxi-message $transition-duration;
+        animation-iteration-count: infinite;
     }
     &__nearest-lantern {
         position: absolute;
-        top: 214px;
-        left: 1026px;
-        z-index: 3;
+        top: 3%;
+        right: 11.5%;
+        width: 15.31%;
+        height: auto;
     }
     &__woman {
         position: absolute;
-        top: 508px;
-        left: 182px;
-        z-index: 4;
+        width: 19.364%;
+        height: auto;
+        bottom: 6%;
+        left: 12.3%;
         &_wrapper {
             position: relative;
         }
+        &_body {
+            position: absolute;
+            bottom: 0%;
+            left: 4%;
+            width: 36.127%;
+            height: auto;
+        }
         &_message {
             position: absolute;
-            top: -99px;
-            left: -90px;
+            bottom: 47.7%;
+            left: 6.7%;
+            width: 11.464%;
+            height: auto;
             animation: woman-message $transition-duration;
             animation-iteration-count: infinite;
         }
         &_suitcases {
             position: absolute;
-            bottom: 5px;
-            left: -10px;
+            bottom: 0%;
+            left: 0;
+            width: 70.49%;
+            height: auto;
         }
     }
     &__man {
         position: absolute;
         top: 422px;
         left: 288px;
-        z-index: 5;
-        &_wrapper {
-            position: relative;
-        }
         &_body {
+            position: absolute;
+            top: 38%;
+            left: 20.6%;
+            width: 14.6157%;
+            height: auto;
         }
         &_message {
             position: absolute;
-            top: -84px;
-            left: -10px;
+            top: 26%;
+            left: 20%;
+            width: 11.4286%;
+            height: auto;
             animation: man-message $transition-duration;
             animation-iteration-count: infinite;
         }
         &_hand {
             position: absolute;
-            top: -38px;
-            left: 0px;
+            top: 34%;
+            left: 20.5%;
+            width: 5.7636%;
+            height: auto;
             transform: rotate(150deg);
             transform-origin: 13% 91%;
-            z-index: -1;
             animation: hand $transition-duration;
             animation-iteration-count: infinite;
         }

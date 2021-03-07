@@ -1,5 +1,9 @@
-.svg {
+.image {
     padding-top: 30px;
     padding-bottom: 40px;
     margin-left: -20px;
+    &__svg {
+        width: 100%;
+        max-width: 458px;
+    }
 }
