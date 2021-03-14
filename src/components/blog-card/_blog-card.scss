@@ -14,8 +14,17 @@
         width: 33.33%;
         max-width: 420px;
     }
+    &__img-wrapper {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 58%;
+    }
     &__img {
         display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         padding-bottom: 0px;
     }

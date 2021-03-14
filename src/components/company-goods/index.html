@@ -2,7 +2,9 @@
     <a class="company-goods__link" href="@@href">
         <div class="company-goods__user-attention">Learn more</div>
     </a>
-    <img class="company-goods__img" src="@@img" alt="@@alt" width="380" height="385">
+    <picture class="company-goods__img-wrapper">
+        <img class="company-goods__img" src="@@img" srcset="@@img?2, @@img2?1 2x" alt="@@alt">
+    </picture>
     <p class="company-goods__description">@@description</p>
     <p class="company-goods__cost">@@cost</p>
 </li>

@@ -106,13 +106,6 @@ $transition-duration: 15s;
     }
 }
 
-
-
-
-
-
-
-
 .animation {
     display: block;
     position: relative;
@@ -123,6 +116,7 @@ $transition-duration: 15s;
     overflow: hidden;
     &__clouds {
         display: block;
+        padding-left: 5.7764%;
         width: 100%;
         height: auto;
     }

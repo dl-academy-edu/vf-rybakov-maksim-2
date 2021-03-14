@@ -111,9 +111,17 @@
     }
   }
   &__search_img {
-    margin-right: 24px;
-    @media (max-width: 800px) {
-      margin: 0;
+    margin-right: 0;
+    width: 12.61px;
+    height: 12.89px;
+    @media (min-width: 600px) {
+      width: 17.2px;
+      height: 17.58px;
+    }
+    @media (min-width: 800px) {
+      margin-right: 24px;
+      width: 17.2px;
+      height: 17.58px;
     }
   }
   &__contact_button {
@@ -219,16 +227,7 @@
     text-decoration: none;
     color: #1E0606;
   }
-  &__search_img {
-    width: 12.61px;
-    height: 12.89px;
-  }
-  &__search_button {
-    width: 33.33%;
-    text-align: right;
-    background: transparent;
-    border: none;
-  }
+  
   &__button_contact {
     display: flex;
     justify-content: center;

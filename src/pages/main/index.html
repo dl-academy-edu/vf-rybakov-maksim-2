@@ -16,7 +16,12 @@
     <h1 class="home-page-title visually-hidden">DLC shop</h1>
 <section class="slider container">
     <div class="slider__information">
-        <img class="slider__img" src="/static/images/toy-in-trolley.png" alt="toy in trolley">
+        <picture>
+            <source srcset="/static/images/toy-in-trolley-mobile.png, /static/images/toy-in-trolley-mobile2.png 2x" media="(max-width:759px)">
+            <source srcset="/static/images/toy-in-trolley-tablet.png, /static/images/toy-in-trolley-tablet2.png 2x" media="(max-width:1100px)">
+            <source srcset="/static/images/toy-in-trolley.png, /static/images/toy-in-trolley2.png 2x">
+            <img class="slider__img" src="/static/images/toy-in-trolley.png" alt="toy in trolley">
+        </picture>
         <div class="slider-pagination">
             <p class="slider-pagination__page-number">01</p>
             <ul class="slider-pagination__ul">
@@ -81,10 +86,10 @@
 <section class="service container">
     <picture class="service__img_wrapper">
         <source srcset="/static/images/girl-in-dress-mobile.jpg, /static/images/girl-in-dress-mobile2x.jpg 2x" media="(max-width:530px)">
-        <source srcset="/static/images/girl-in-dress.jpg, /static/images/girl-in-dress.jpg?21 2x" media="(max-width:668px)">
+        <source srcset="/static/images/girl-in-dress.jpg, /static/images/girl-in-dress2x.jpg 2x" media="(max-width:668px)">
         <source srcset="/static/images/girl-in-dress-tablets.jpg, /static/images/girl-in-dress-tablets2x.jpg 2x" media="(max-width:1024px)">
-        <source srcset="/static/images/girl-in-dress.jpg, /static/images/girl-in-dress.jpg?15 2x">
-        <img class="service__img" srcset="/static/images/girl-in-dress.jpg" alt="a girl in a dress">
+        <source srcset="/static/images/girl-in-dress.jpg, /static/images/girl-in-dress2x.jpg 2x">
+        <img class="service__img" src="/static/images/girl-in-dress.jpg" srcset="/static/images/girl-in-dress.jpg" alt="a girl in a dress">
     </picture>
     
     <div class="service-information">
@@ -113,10 +118,34 @@
 <section class="partners container">
     <h2 class="partners__title visually-hidden">Partners</h2>
     <ul class="partners__list">
-        <li class="partners__name_li order-1"><a class="partners__name" href="#"><img class="partners__name_mail" src="/static/images/mail.png" alt="mail.ru"></a></li>
-        <li class="partners__name_li order-2"><a class="partners__name" href="#"><img class="partners__name_apple" src="/static/images/apple.png" alt="apple"></a></li>
-        <li class="partners__name_li order-3"><a class="partners__name" href="#"><img class="partners__name_eltex" src="/static/images/eltex.png" alt="eltex"></a></li>
-        <li class="partners__name_li order-4"><a class="partners__name" href="#"><img class="partners__name_owox" src="/static/images/owox.png" alt="owox"></a></li>
+        <li class="partners__name_li order-1">
+            <a class="partners__name" href="#">
+                <picture>
+                    <img class="partners__name_mail" src="/static/images/mail.png" srcset="/static/images/mail.png, /static/images/mail2x.png 2x" alt="mail.ru">
+                </picture>
+            </a>
+        </li>
+        <li class="partners__name_li order-2">
+            <a class="partners__name" href="#">
+                <picture>
+                    <img class="partners__name_apple" src="/static/images/apple.png" srcset="/static/images/apple.png, /static/images/apple2x.png 2x" alt="apple">
+                </picture>
+            </a>
+        </li>
+        <li class="partners__name_li order-3">
+            <a class="partners__name" href="#">
+                <picture>
+                    <img class="partners__name_eltex" src="/static/images/eltex.png" srcset="/static/images/eltex.png, /static/images/eltex2x.png 2x" alt="eltex">
+                </picture>
+            </a>
+        </li>
+        <li class="partners__name_li order-4">
+            <a class="partners__name" href="#">
+                <picture>
+                    <img class="partners__name_owox" src="/static/images/owox.png" srcset="/static/images/owox.png, /static/images/owox2x.png 2x" alt="owox">
+                </picture>
+            </a>
+        </li>
     </ul>
 </section>
 <section class="about-us container">
