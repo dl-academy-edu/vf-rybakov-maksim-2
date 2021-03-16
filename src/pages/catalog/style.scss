@@ -134,6 +134,187 @@
 }
 
 
+
+
+$numberColumns: 12;
+$gap: 20px;
+
+$size-xl: 1220px;
+$size-lg: 1000px;
+$size-md: 768px;
+$size-sm: 576px;
+
+@mixin media-interval($min, $max) {
+    @if $max == 0 {
+    $max: 9999px;
+    }
+
+    @media (min-width: ($min + 1px)) and (max-width: $max) {
+    @content;
+    }
+}
+@mixin create-grid($type-width, $media-size) {
+    @if media-size == "full" {
+    .category-container {
+        max-width: 100%;
+    }
+    } @else {
+    .category-container {
+        max-width: $media-size - $gap;
+    }
+    }
+    @for $i from 1 through $numberColumns {
+    .col-#{$type-width}-#{$i} {
+      width: (100% / $numberColumns) * $i;
+    }
+    
+    .skip-#{$type-width}-#{$i} {
+      margin-left: (100% / $numberColumns) * $i;
+    }
+    .add-#{$type-width}-#{$i} {
+      margin-right: (100% / $numberColumns) * $i;
+    }
+    }
+}
+
+@include media-interval($size-xl, 0) {
+    @include create-grid(xl, $size-xl);
+}
+@include media-interval($size-lg, $size-xl) {
+    @include create-grid(lg, $size-lg);
+}
+@include media-interval($size-md, $size-lg) {
+    @include create-grid(md, $size-md);
+}
+@include media-interval($size-sm, $size-md) {
+    @include create-grid(sm, $size-sm);
+}
+@include media-interval(0, $size-sm) {
+    @include create-grid(xs, "full");
+}
+
+.category-container {
+    padding-left: $gap;
+    padding-right: $gap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+div[class*="col"] {
+    box-sizing: border-box;
+    padding: $gap $gap/2 0 $gap/2;
+}
+
+
+.row {
+    .content {
+    }
+}
+
+.content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-height: 154px;
+    background-size: contain;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90% auto;
+    cursor: pointer;
+    @media (min-width: 480px) {
+        min-height: 196px;
+    }
+    @media (min-width: 1000px) {
+        min-height: 232px;
+    }
+    @media (min-width: 1150px) {
+        min-height: 270px;
+    }
+    &__link {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+    &__title {
+        display: block;
+        margin: auto;
+        max-width: 139px;
+        font-family: 'Montserrat', 'Arial', 'sans-serif';
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-transform: uppercase;
+        text-align: center;
+        color: #FFFFFF;
+        transition: text-decoration-color .4s;
+        @media (min-width: 680px) {
+            max-width: 185px;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        @media (min-width: 1140px) {
+            max-width: 192px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+    &:hover .category-card__title { //при фокусе не могу настроить
+        text-decoration-color: #FFFFFF;
+    }
+}
+
+.content-1 {
+    background-color: #DBE4DB;
+    background-image: url(/static/images/apparel-kids.png);
+}
+.content-2 {
+    background-color: #EADDD3;
+    background-image: url(/static/images/holiday-shop.png);
+    background-size: auto 95%;
+}
+.content-3 {
+    background-color: #F8F2DA;;
+    background-image: url(/static/images/toys.png);
+}
+.content-4 {
+    background-color: #D5D4E1;
+    background-image: url(/static/images/accessories.png);
+}
+.content-5 {
+    background-color: #F3D0DB;
+    background-image: url(/static/images/pink-flamingo.png);
+    
+}
+.content-6 {
+    background-color: #E5EAF8;
+    background-image: url(/static/images/pink-shirt.png);
+}
+
+
+
+
 .product-description {
     margin-bottom: 50px;
     padding-right: 20px;
@@ -185,3 +366,5 @@
         }
     }
 }
+
+
