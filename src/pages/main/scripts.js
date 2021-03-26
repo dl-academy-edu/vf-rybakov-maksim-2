@@ -40,18 +40,18 @@ var mobileMenu = document.querySelector('.mobile-menu');
  
 buttonMobileHeader.addEventListener('click', function () {
     mobileHeader.classList.add('mobile-menu__open')
-    buttonMobileHeader.classList.add('displey-none')
-    buttonCloseMobileHeader.classList.remove('displey-none')
+    buttonMobileHeader.classList.add('display-none')
+    buttonCloseMobileHeader.classList.remove('display-none')
     mobileMenu.classList.add('mobile-menu__background');
-    mobileMenu.classList.remove('displey-none');
+    mobileMenu.classList.remove('display-none');
 })
  
 buttonCloseMobileHeader.addEventListener('click', function() {
     mobileHeader.classList.remove('mobile-menu__open')
-    buttonCloseMobileHeader.classList.add('displey-none')
-    buttonMobileHeader.classList.remove('displey-none')
+    buttonCloseMobileHeader.classList.add('display-none')
+    buttonMobileHeader.classList.remove('display-none')
     mobileMenu.classList.remove('mobile-menu__background');
-    mobileMenu.classList.add('displey-none');
+    mobileMenu.classList.add('display-none');
 })
 
 
