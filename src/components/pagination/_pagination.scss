@@ -1,11 +1,8 @@
-/*pagination block*/
 
 .pagination {
     display: flex;
     justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: center;
+    align-items: center;
     margin-right: 3px;
     margin-left: 3px;
     margin-bottom: 55px;
@@ -36,9 +33,7 @@
             opacity: 50%;
         }
         &_svg-transform {
-            -webkit-transform: rotate(180deg);
-                -ms-transform: rotate(180deg);
-                    transform: rotate(180deg);
+            transform: rotate(180deg);
         }
     }
     &__pages {

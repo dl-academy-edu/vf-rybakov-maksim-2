@@ -4,11 +4,8 @@
         max-width: 1400px;
     }
     &__cards {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         justify-content: center;
         margin: 0;
         margin-top: 50px;
@@ -64,8 +61,6 @@
     }
     &__link {
         position: absolute;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         width: 100%;
         height: 100%;
@@ -133,12 +128,8 @@
     }
 }
 
-
-
-
 $numberColumns: 12;
 $gap: 20px;
-
 $size-xl: 1220px;
 $size-lg: 1000px;
 $size-md: 768px;
@@ -148,11 +139,11 @@ $size-sm: 576px;
     @if $max == 0 {
     $max: 9999px;
     }
-
     @media (min-width: ($min + 1px)) and (max-width: $max) {
     @content;
     }
 }
+
 @mixin create-grid($type-width, $media-size) {
     @if media-size == "full" {
     .category-container {
@@ -167,7 +158,6 @@ $size-sm: 576px;
     .col-#{$type-width}-#{$i} {
       width: (100% / $numberColumns) * $i;
     }
-    
     .skip-#{$type-width}-#{$i} {
       margin-left: (100% / $numberColumns) * $i;
     }
@@ -194,8 +184,6 @@ $size-sm: 576px;
 }
 
 .category-container {
-    padding-left: $gap;
-    padding-right: $gap;
     margin-left: auto;
     margin-right: auto;
 }
@@ -203,6 +191,7 @@ $size-sm: 576px;
 .row {
     display: flex;
     margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+    margin-top: 30px;
 }
 
 .col {
@@ -242,8 +231,6 @@ div[class*="col"] {
     }
     &__link {
         position: absolute;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         width: 100%;
         height: 100%;
@@ -306,9 +293,6 @@ div[class*="col"] {
     background-image: url(/static/images/pink-shirt.png);
 }
 
-
-
-
 .product-description {
     margin-bottom: 50px;
     padding-right: 20px;
@@ -360,5 +344,3 @@ div[class*="col"] {
         }
     }
 }
-
-

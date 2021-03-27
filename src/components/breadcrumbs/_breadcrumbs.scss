@@ -20,15 +20,10 @@
     }
 }
 
-/*breadcrumbs-block*/
-
 .breadcrumbs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-top: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
     &__link {
         text-decoration: none;
         transition: opacity $transition-duration;

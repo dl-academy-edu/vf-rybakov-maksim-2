@@ -142,11 +142,8 @@
     }
   }
   &__social {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: 0;
     margin-top: 25px;
     padding: 0;
@@ -182,14 +179,9 @@
     }
   }
   &__nav-bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
     margin-top: 23px;
     padding: 0;
@@ -231,8 +223,7 @@
       &:focus,
       &:active {
         margin: 0;
-        -webkit-text-decoration-line: underline;
-                text-decoration-line: underline;
+        text-decoration-line: underline;
         color: #FFFFFF;
       }
     }
@@ -266,11 +257,8 @@
       height: 15px;
       background-size: 20px 14px;
       font-size: inherit;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
+      appearance: none;
       background-repeat: repeat-x;
-      // transition: background-image $transition-duration, background-color $transition-duration;
       &:hover {
         background-image: url(/static/images/Star-hover.svg);
         background-color: #434343;
@@ -320,7 +308,3 @@
     }
   }
 }
-
-
-
-

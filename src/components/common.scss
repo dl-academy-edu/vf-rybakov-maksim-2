@@ -1,4 +1,3 @@
-/*general*/
 
 body {
   margin: 0;
@@ -20,8 +19,7 @@ $blog-card-title-color: #1E0606;
 *, 
 *::before, 
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container,
@@ -41,8 +39,6 @@ $blog-card-title-color: #1E0606;
   }
 }
 
-
-
 ul {
   list-style: none;
 }
@@ -55,8 +51,7 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }

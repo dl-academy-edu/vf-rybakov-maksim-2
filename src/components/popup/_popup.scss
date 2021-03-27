@@ -1,5 +1,3 @@
-/**Form stile**/
-
 
 .index-popup {
     position: fixed;
@@ -9,8 +7,6 @@
     margin: 0 auto;
     margin-top: 128px;
     transform: translate(-50%,0);
-    // height: 555px;
-    // overflow-y: auto;
     @media (min-width: 760px) {
         margin-top: 241px;
     }
@@ -49,8 +45,6 @@
         border-width: 0;
         padding: 25px 25px;
         background-color: #E5EAF8;
-        // height: 555px;
-        // overflow-y: auto;
         @media (min-width: 767px) {
             padding: 42px 30px;
         }
@@ -90,7 +84,6 @@
             margin-bottom: 6px;
         }
     }
-    
     &__input {
         display: block;
         margin-bottom: 15px;
@@ -143,8 +136,7 @@
         }
         &_user-message {
             width: 100%;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            box-sizing: border-box;
             margin-bottom: 8px;
             padding-left: 20px;
             padding-top: 11px;
@@ -155,8 +147,7 @@
             transition: width $transition-duration, margin-bottom $transition-duration, border-color $transition-duration;
             &:hover {
                 width: 100%;
-                -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
+                box-sizing: border-box;
                 margin-bottom: 8px;
                 border: 1px solid;
                 border-color: rgba(0, 0, 0, 0.3);
@@ -181,8 +172,7 @@
             width: 19px;
             height: 19px;
             border: 2px solid #C29974;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            box-sizing: border-box;
             border-radius: 3px;
         }
         &::after {
@@ -194,8 +184,7 @@
             width: 19px;
             height: 19px;
             border: 2px solid #C29974;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            box-sizing: border-box;
             border-radius: 3px;
             transition: border-color $transition-duration;
         }

@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="/static/fonts/oswald.css" /> -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
 </head>
 <body>
@@ -89,10 +88,9 @@
                 @@include('button/index.html', {
                     "button-text": "Apply",
                     "tag": "button",
-                    "type": "submit",
+                    "type": "type=submit",
                     "class": "goods-filter__button"
-                  })
-                <!-- <button type="submit" class="details-goods-submit button">Apply</button> -->
+                })
             </form>
         </section>
         <section class="company-goods container">
@@ -154,5 +152,5 @@
         </main>
     @@include('footer/index.html')
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
