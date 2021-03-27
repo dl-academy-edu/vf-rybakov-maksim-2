@@ -243,7 +243,6 @@
         background-image: url('/static/images/toys-checkbox.png');
         background-repeat: no-repeat;
         background-color: #FFFFFF;
-        border: 2px solid #836E5B;
     }
     &__input:hover + &__label::after, 
     &__input:focus + &__label::after {
