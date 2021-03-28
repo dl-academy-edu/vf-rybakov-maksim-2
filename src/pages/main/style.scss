@@ -75,7 +75,10 @@
   &__ul {
     margin: 0 0 0 0;
     padding: 0;
-    padding-left: 4px;
+    padding-left: 13px;
+    @media (min-width: 751px) {
+      padding-left: 4px;
+    }
   }
   &__button {
     margin: 0;
