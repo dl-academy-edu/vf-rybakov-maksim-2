@@ -591,15 +591,13 @@
   flex-wrap: wrap;
   margin-top: 95px;
   margin-bottom: 148px;
-  margin-right: -20px;
-  margin-left: -20px;
-  // padding: 0;
+  padding-right: 0;
+  padding-left: 0;
   @media (min-width: 470px) and (max-width: 767px) {
     margin-top: 95px;
     margin-bottom: 125px;
-    margin-right: 0;
-    margin-left: 0;
-    // padding: 0 30px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     flex-wrap: nowrap;
@@ -607,7 +605,8 @@
     margin-bottom: 125px;
     margin-right: auto;
     margin-left: auto;
-    // padding: 0 30px;
+    padding-right: 60px;
+    padding-left: 60px;
   }
   @media (min-width: 1024px) {
     flex-wrap: nowrap;
@@ -615,7 +614,8 @@
     margin-bottom: 147px;
     margin-right: auto;
     margin-left: auto;
-    // padding: 0 30px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
   &__left-wrapper {
     position: relative;
