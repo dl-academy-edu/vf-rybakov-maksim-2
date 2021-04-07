@@ -1,28 +1,67 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
 
 body {
-  font-family: Oswald, sans-serif;
+  margin: 0;
+  font-family: 'Open Sans', 'Arial', 'sans-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1E0606;
 }
 
-.container {
-  width: 100%;
-  max-width: 1180px;
+$transition-duration: .4s;
+$blog-card-title-color: #1E0606;
+
+.img {
+  max-width: 100%;
+}
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+.container,
+.mobile-menu__container {
   margin: 0 auto;
+  max-width: 1400px;
+  padding: 0;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-.title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
+  @media (min-width: 630px) and (max-width: 1023px) {
+    padding-right: 60px;
+    padding-left: 60px;
   }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
+  @media (min-width: 1024px) {
+    padding-right: 110px;
+    padding-left: 110px;
   }
 }
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@import "./header/header";
+@import "./footer/footer";
+@import "./popup/popup";
+@import "./breadcrumbs/breadcrumbs";
+@import "./pagination/pagination";
+@import "./button/button";
+@import "./blog-card/blog-card";
+@import "./category-products/category-products";
+@import "./company-goods/company-goods";
+@import "./variables/variables";

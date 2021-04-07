@@ -1,0 +1,19 @@
+.button {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    background: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: 0;
+    cursor: pointer;
+    transition: background-color $transition-duration;
+    &:hover,&:focus {
+      background-color: #C29974;
+    }
+    &:active {
+      background-color: #CFAF91;
+    }
+  }
+  

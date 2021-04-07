@@ -1,28 +1,146 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Каталог</title>
-  </head>
-  <body>
+</head>
+<body>
     @@include('header/index.html')
-    <main class="catalog-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Каталог</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице каталога
-        </h2>
-      </div>
+    <main>
+    <h1 class="page-title container">Category Products</h1>
+    <div class="breadcrumbs container">
+        <a class="breadcrumbs__link" href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+        <p class="breadcrumbs__active-page">Catalog</p>
+    </div>
+    <!-- <section class="catalog__container container">
+        <h2 class="visually-hidden">Categoryes preview</h2>
+        <ul class="catalog__cards">
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Apparel kids",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Holiday shop",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Toys",
+                "class-link": "category-card__link",
+                "href": "/pages/toys",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Accessories",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Sale",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+            @@include('category-products/index.html', {
+                "class": "category-card",
+                "class-title": "category-card__title",
+                "text": "Apparel adults",
+                "class-link": "category-card__link",
+                "href": "#",
+            })
+        </ul>
+    </section> -->
+    <section class="container">
+        <div class="category-container">    
+            <h2 class="visually-hidden">Categoryes preview</h2>
+            <div class="row flex-wrap">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-1",
+                            "class-title": "content__title",
+                            "text": "Apparel kids",
+                            "class-link": "content__link",
+                            "href": "#",
+                        })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-md-4 col-xs-6">
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-2",
+                            "class-title": "content__title",
+                            "text": "Holiday shop",
+                            "class-link": "content__link",
+                            "href": "#",
+                        })
+                </div>
+                <div class="col-xl-3 add-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-3",
+                            "class-title": "content__title",
+                            "text": "Toys",
+                            "class-link": "content__link",
+                            "href": "/pages/toys",
+                        })
+                </div>
+                <div class="col-xl-3 skip-xl-2 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-4",
+                            "class-title": "content__title",
+                            "text": "Accessories",
+                            "class-link": "content__link",
+                            "href": "#",
+                        })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-5",
+                            "class-title": "content__title",
+                            "text": "Sale",
+                            "class-link": "content__link",
+                            "href": "#",
+                        })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        @@include('category-products/caterory-products-card.html', {
+                            "class": "content content-6",
+                            "class-title": "content__title",
+                            "text": "Apparel adults",
+                            "class-link": "content__link",
+                            "href": "#",
+                        })
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-description catalog__container container">
+        <h2 class="product-description__title">Product Description</h2>
+        <p class="product-description__text">
+            Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
+        </p>
+        <p class="product-description__text">
+            A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+        </p>
+        <p class="product-description__text">
+            The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+        </p>
+    </section>
     </main>
     @@include('footer/index.html')
     <script src="index.js"></script>
-  </body>
+</body>
 </html>

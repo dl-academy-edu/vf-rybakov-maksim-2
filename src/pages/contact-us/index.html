@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+    <section class="container">
+        <h1 class="page-title">Contact Us</h1>
+        <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+            <p class="breadcrumbs__active-page">Contact us</p>
+        </div>
+    </section>
+    <section class="contact-main container">
+        <h2 class="visually-hidden">Contact form</h2>
+        <div class="contact__wrapper">
+            <form class="index-popup__form" id="popup" name="user-message" method="POST" action="https://echo.htmlacademy.ru">
+                <fieldset class="index-popup__fieldset">
+                    <div class="index-popup__inputs_wrapper">
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_top">
+                            <label class="index-popup__label" for="popup-user-name">Name</label>
+                            <input class="index-popup__input_user-name index-popup__input" id="popup-user-name" type="text" placeholder="Ivan Ivanov">
+                        </div>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_center">
+                            <label class="index-popup__label index-popup__label_center" for="popup-user-phone">Phone</label>
+                            <input class="index-popup__input_user-phone index-popup__input" id="popup-user-phone" type="text">
+                        </div>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_center">
+                            <label class="index-popup__label index-popup__label_center" for="popup-user-email">Email</label>
+                            <input class="index-popup__input_user-email index-popup__input" id="popup-user-email" type="email">
+                        </div>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_bottom">
+                            <label class="index-popup__label" for="popup-user-message">Message</label>
+                            <textarea class="index-popup__input_user-message index-popup__input" name="user-message" id="popup-user-message" cols="80" rows="8"></textarea>
+                        </div>
+                        <div class="index-popup__label-wrapper index-popup__label-wrapper_bottom">
+                            <input class="index-popup__input-consent visually-hidden" id="user-consent" type="checkbox" checked>
+                            <label class="index-popup__label-consent" for="user-consent">By clicking on the button, you consent to the processing of your personal data</label>
+                        </div>
+                        <div class="index-popup__label-wrapper">
+                            @@include('button/index.html', {
+                                "button-text": "Submit",
+                                "tag": "button",
+                                "type": "type=submit",
+                                "class": "index-popup__button-subscribe"
+                            })
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="contact__description">
+            <p class="contact__description_text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+            <p class="contact__description_text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+            <p class="contact__description_slogan">An expert is waiting to help you!</p>
+        </div>
+    </section>
+</main>
+@@include('footer/index.html')
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+    <section class="container">
+        <h1 class="page-title">Technologies</h1>
+        <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="/index.html"><p class="breadcrumbs__page-inactive">Home</p></a>
+            <p class="breadcrumbs__active-page">Grid</p>
+        </div>
+    </section>
+    <section>
+        <h2 class="visually-hidden">Grid blocks</h2>
+        <div class="grid grid__container">
+            <div class="grid__box1">
+                <a class="grid__box1_title" href="#">learn more</a>
+                <p class="grid__box1_description">How to Use Rotary Evaporator in Chemical Labs</p>
+                <button class="grid__box1_button">Download now</button>
+            </div>
+            <div class="grid__box2">
+                <div class="grid__box2_content">
+                    <p class="grid__box2_title">Iphone 6S</p>
+                    <p class="grid__box2_description">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+                    <a class="grid__box2_link" href="#">Learn more or visit an Apple Store today</a>
+                </div>
+                <picture class="grid__box2_picture">
+                    <source srcset="/static/images/iphone-mobile.png, /static/images/iphone-mobile2x.png 2x" media="(max-width:739px)">
+                    <source srcset="/static/images/iphone.png, /static/images/iphone2x.png 2x">
+                    <img class="grid__box2_img" src="/static/images/iphone.png" alt="iphone">
+                </picture>
+            </div>
+            <div class="grid__box3">
+                <picture class="grid__box3_picture">
+                    <source srcset="/static/images/keyboard.png, /static/images/keyboard2x.png 2x">
+                    <img class="grid__box3_img" src="/static/images/keyboard.png" alt="keyboard">
+                </picture>
+                <p class="grid__box3_description">Our Brand New Keyboard</p>
+                <a class="grid__box3_link" href="#">learn ›</a>
+            </div>
+            <div class="grid__box4">
+                <picture class="grid__box4_picture">
+                    <source srcset="/static/images/joystick.png, /static/images/joystick2x.png 2x">
+                    <img class="grid__box4_img" src="/static/images/joystick.png" alt="joystick">
+                </picture>
+                <p class="grid__box4_description">Games ourpasion</p>
+                <a class="grid__box4_link" href="#">learn ›</a>
+            </div>
+            <div class="grid__box5">
+                <div class="grid__box5_information">
+                    <p class="grid__box5_title">imac.retina</p>
+                    <p class="grid__box5_description">Hardly a month passes these days where</p>
+                    <picture class="grid__box5_picture">
+                        <source srcset="/static/images/old-computer-mobile.png, /static/images/old-computer-mobile2x.png 2x" media="(max-width:739px)">
+                        <source srcset="/static/images/old-computer-tablet.png, /static/images/old-computer-tablet2x.png 2x" media="(max-width:1279px)">
+                        <source srcset="/static/images/old-computer.png, /static/images/old-computer2x.png 2x">
+                        <img class="grid__box5_img" src="/static/images/old-computer.png" alt="old computer">
+                    </picture>
+                </div>
+                <div class="grid__box5_information">
+                    <p class="grid__box5_text">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+                    <button class="grid__box5_button">DOWNLOAD NOW ›</button>
+                </div>
+            </div>
+            <div class="grid__box6">
+                <p class="grid__box6_marker">best choice</p>
+                <p class="grid__box6_description">Much MuchBetter Experience</p>
+                <picture class="grid__box6_picture">
+                    <source srcset="/static/images/laptop.png, /static/images/laptop2x.png 2x">
+                    <img class="grid__box6_img" src="/static/images/laptop.png" alt="laptop">
+                </picture>
+            </div>
+            <div class="grid__box7">
+                <svg class="grid__box7_svg" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.4888 2.00822L29.5 2.00828L29.5112 2.00822C34.9773 1.97747 37.4821 2.03118 41.5072 2.19984C44.4816 2.373 45.8509 2.63683 48.0301 3.42781C50.1216 4.2757 51.0492 4.89777 52.6102 6.38983C54.1022 7.95079 54.7243 8.87837 55.5722 10.9698C56.3632 13.1491 56.627 14.5183 56.8001 17.4926C56.9688 21.5179 57.0225 24.0227 56.9918 29.4888L56.9917 29.5L56.9918 29.5112C57.0225 34.9773 56.9688 37.4821 56.8001 41.5074C56.627 44.4817 56.3632 45.8509 55.5722 48.0302C54.7243 50.1216 54.1022 51.0492 52.6102 52.6102C51.0492 54.1022 50.1216 54.7243 48.0302 55.5722C45.8509 56.3632 44.4817 56.627 41.5074 56.8001C37.4821 56.9688 34.9773 57.0225 29.5112 56.9918L29.5 56.9917L29.4888 56.9918C24.0227 57.0225 21.5179 56.9688 17.4926 56.8001C14.5183 56.627 13.1491 56.3632 10.9698 55.5722C8.87837 54.7243 7.95079 54.1022 6.38983 52.6102C4.89777 51.0492 4.2757 50.1216 3.42781 48.0301C2.63683 45.8509 2.373 44.4816 2.19984 41.5072C2.03118 37.4821 1.97747 34.9773 2.00822 29.5112L2.00828 29.5L2.00822 29.4888C1.97747 24.0227 2.03118 21.5179 2.19984 17.4928C2.373 14.5184 2.63683 13.1491 3.42782 10.9698C4.2757 8.87837 4.89777 7.95079 6.38983 6.38983C7.95079 4.89777 8.87837 4.2757 10.9698 3.42782C13.1491 2.63683 14.5184 2.373 17.4928 2.19984C21.5179 2.03118 24.0227 1.97747 29.4888 2.00822Z" stroke="#2C3036" stroke-width="4" stroke-linecap="square"/>
+                    <circle cx="29.5" cy="29.5" r="12.5" stroke="#2C3036" stroke-width="4" stroke-linecap="square"/>
+                    <circle cx="45.5" cy="13.5" r="3.5" fill="#2C3036"/>
+                    </svg>
+                <a class="grid__box7_link" href="#">Follow me ›</a>
+            </div>
+            <div class="grid__box8">
+                <div class="grid__box8_top-block">
+                    <p class="grid__box8_marker">popular</p>
+                    <picture class="grid__box8_picture">
+                        <source srcset="/static/images/diskette.png, /static/images/diskette2x.png 2x">
+                        <img class="grid__box8_img" src="/static/images/diskette.png" alt="diskette">
+                    </picture>
+                    <p class="grid__box8_slogan">meet</p>
+                </div>
+                <p class="grid__box8_title">iCloud</p>
+                <p class="grid__box8_text">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+                <a class="grid__box8_link" href="#">learn more</a>
+            </div>
+            <div class="grid__box9">
+                <picture class="grid__box9_picture">
+                    <source srcset="/static/images/tv-mobile.png, /static/images/tv-mobile2x.png 2x" media="(max-width:739px)">
+                    <source srcset="/static/images/tv.png, /static/images/tv2x.png 2x">
+                    <img class="grid__box9_img" src="/static/images/tv.png" alt="TV">
+                </picture>
+                <p class="grid__box9_description">More than just a display,  it’s a vision</p>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('footer/index.html')
+<script src="index.js"></script>
+</body>
+</html>

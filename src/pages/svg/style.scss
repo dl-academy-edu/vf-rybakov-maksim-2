@@ -1,0 +1,51 @@
+$transition-duration: 30s;
+
+@keyframes sunset {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(43px) translateY(52px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes dawn {
+    0% {
+        fill:#5D9CEC;
+    }
+    35% {
+        fill:#5D9CEC;
+    }
+    50% {
+        fill:#191970;
+    }
+    65% {
+        fill:#5D9CEC;;
+    }
+    100% {
+        fill:#5D9CEC;;
+    }
+}
+
+.image {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    &__svg {
+        width: 100%;
+        max-width: 458px;
+        margin-left: -20px;
+        &_daylight {
+            animation: dawn $transition-duration;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &_sun {
+            animation: sunset $transition-duration;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}

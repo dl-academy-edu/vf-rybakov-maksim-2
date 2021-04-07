@@ -1,0 +1,89 @@
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 55px;
+    &__control {
+        border: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        &:focus &_svg-path {
+            fill: #C29974;
+        }
+        &:hover &_svg-path {
+            fill: #C29974;
+        }
+        &_svg {
+            width: 12px;
+            height: 24px;
+            @media (min-width: 760px) {
+                width: 13px;
+                height: 26px;
+            }
+        }
+        &_svg-path {
+            transition: $transition-duration; //не знаю как свойство fill указать
+        }
+        &:active path {
+            opacity: 50%;
+        }
+        &_svg-transform {
+            transform: rotate(180deg);
+        }
+    }
+    &__pages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-right: -25px;
+        margin-left: -25px;
+        padding: 0;
+        max-width: 600px;
+        @media (min-width: 760px) {
+            margin-right: -32px;
+            margin-left: -32px;
+        }
+        &_li {
+            padding: 0;
+            align-items: center;
+        }
+        &_active {
+            color: #C29974;
+        }
+        &_inactive {
+            color: #1E0606;
+        }
+        &_button {
+            font-family: 'Montserrat', 'Arial', 'sans-serif';
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17.07px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0;
+            padding-right: 25px;
+            padding-left: 25px;
+            border: 0;
+            background: none;
+            cursor: pointer;
+            @media (min-width: 760px) {
+                padding-right: 32px;
+                padding-left: 32px;
+                font-size: 16px;
+                line-height: 19.5px;
+            }
+            transition: opacity $transition-duration;
+            &:hover,
+            &:focus {
+                opacity: 0.5;
+            }
+        }
+    }
+}
